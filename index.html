@@ -42,12 +42,11 @@
             <div id="archive-table">
                 <div class="table-header">
                     <div class="col-5 header-left">
-                        <div class="cell-id" onclick="sortTable('id')">
-                            <a>ID</a>
-                            <div class="cell-color"><div class="color-square grey"></div></div>
+                        <div class="cell-id">
+                            <a onclick="sortTable('id')">ID</a>
+                            <div class="cell-color"><div class="color-square grey" onclick="sortTable('color')"></div></div>
                         </div>
-                        <div class="cell-name" onclick="sortTable('name')"><a>Name</a></div>
-                        <div class="cell-universe" onclick="sortTable('universe')"><a>Origin universe</a></div>
+                        <div class="cell-name" onclick="sortTable('name')"><a>Name</a></div> <div class="cell-universe" onclick="sortTable('universe')"><a>Origin universe</a></div>
                     </div>
                     <div class="col-3 header-right">
                         <div class="cell-configs" onclick="sortTable('configs')"><a>Configurations</a></div>
@@ -58,6 +57,7 @@
                 <div id="table-body">
                     <div class="table-row" onclick="open001()" 
                     data-id="1" 
+                    data-color="3" 
                     data-name="Tyler Gregory Okonma" 
                     data-universe="Real world" 
                     data-configs="13" 
@@ -79,248 +79,310 @@
                     </div>
                     <div class="table-row" onclick="open002()"
                     data-id="2" 
-                    data-name="Tyler Gregory Okonma" 
+                    data-color="3" 
+                    data-name="Davide Mattei" 
                     data-universe="Real world" 
-                    data-configs="13" 
-                    data-modules="37" 
+                    data-configs="3" 
+                    data-modules="7" 
                     data-author="Creator">
                         <div class="col-5 row-left">
                             <div class="cell-id">
                                 <a>#002</a>
                                 <div class="cell-color"><div class="color-square green"></div></div>
                             </div>
-                            <div class="cell-name">Tyler Gregory Okonma</div>
+                            <div class="cell-name">Davide Mattei</div>
                             <div class="cell-universe">Real world</div>
                         </div>
                         <div class="col-3 row-right">
-                            <div class="cell-configs">13</div>
-                            <div class="cell-modules">37</div>
+                            <div class="cell-configs">3</div>
+                            <div class="cell-modules">7</div>
                             <div class="cell-author">Creator</div>
                         </div>
                     </div>
-                    <div class="table-row">
+                    <div class="table-row" onclick="open003()"
+                    data-id="3" 
+                    data-color="4" 
+                    data-name="Spider-Man" 
+                    data-universe="Marvel Comics" 
+                    data-configs="8" 
+                    data-modules="14" 
+                    data-author="Creator">
                         <div class="col-5 row-left">
                             <div class="cell-id">
                                 <a>#003</a>
-                                <div class="cell-color"><div class="color-square green"></div></div>
+                                <div class="cell-color"><div class="color-square purple"></div></div>
                             </div>
-                            <div class="cell-name">Tyler Gregory Okonma</div>
-                            <div class="cell-universe">Real world</div>
+                            <div class="cell-name">Spider-Man</div>
+                            <div class="cell-universe">Marvel Comics</div>
                         </div>
                         <div class="col-3 row-right">
-                            <div class="cell-configs">13</div>
-                            <div class="cell-modules">37</div>
+                            <div class="cell-configs">8</div>
+                            <div class="cell-modules">14</div>
                             <div class="cell-author">Creator</div>
                         </div>
                     </div>
-                    <div class="table-row">
+                    <div class="table-row" onclick="open004()"
+                    data-id="4" 
+                    data-color="2" 
+                    data-name="Christopher Edwin Breaux" 
+                    data-universe="Real world" 
+                    data-configs="3" 
+                    data-modules="6" 
+                    data-author="User 12">
                         <div class="col-5 row-left">
                             <div class="cell-id">
                                 <a>#004</a>
-                                <div class="cell-color"><div class="color-square green"></div></div>
+                                <div class="cell-color"><div class="color-square yellow"></div></div>
                             </div>
-                            <div class="cell-name">Tyler Gregory Okonma</div>
+                            <div class="cell-name">Christopher Edwin Breaux</div>
                             <div class="cell-universe">Real world</div>
                         </div>
                         <div class="col-3 row-right">
-                            <div class="cell-configs">13</div>
-                            <div class="cell-modules">37</div>
-                            <div class="cell-author">Creator</div>
+                            <div class="cell-configs">3</div>
+                            <div class="cell-modules">6</div>
+                            <div class="cell-author">User 12</div>
                         </div>
                     </div>
-                    <div class="table-row">
+                    <div class="table-row" onclick="open005()"
+                    data-id="5" 
+                    data-color="2" 
+                    data-name="Pharrell Lanscilo Williams" 
+                    data-universe="Real world" 
+                    data-configs="3" 
+                    data-modules="5" 
+                    data-author="Creator">
                         <div class="col-5 row-left">
                             <div class="cell-id">
                                 <a>#005</a>
-                                <div class="cell-color"><div class="color-square green"></div></div>
+                                <div class="cell-color"><div class="color-square yellow"></div></div>
                             </div>
-                            <div class="cell-name">Tyler Gregory Okonma</div>
+                            <div class="cell-name">Pharrell Lanscilo Williams</div>
                             <div class="cell-universe">Real world</div>
                         </div>
                         <div class="col-3 row-right">
-                            <div class="cell-configs">13</div>
-                            <div class="cell-modules">37</div>
+                            <div class="cell-configs">3</div>
+                            <div class="cell-modules">5</div>
                             <div class="cell-author">Creator</div>
                         </div>
                     </div>
-                    <div class="table-row">
+                    <div class="table-row" onclick="open006()"
+                    data-id="6" 
+                    data-color="2" 
+                    data-name="Light Yagami" 
+                    data-universe="Death Note" 
+                    data-configs="1" 
+                    data-modules="2" 
+                    data-author="Creator">
                         <div class="col-5 row-left">
                             <div class="cell-id">
                                 <a>#006</a>
-                                <div class="cell-color"><div class="color-square green"></div></div>
+                                <div class="cell-color"><div class="color-square yellow"></div></div>
                             </div>
-                            <div class="cell-name">Tyler Gregory Okonma</div>
-                            <div class="cell-universe">Real world</div>
+                            <div class="cell-name">Light Yagami</div>
+                            <div class="cell-universe">Death Note</div>
                         </div>
                         <div class="col-3 row-right">
-                            <div class="cell-configs">13</div>
-                            <div class="cell-modules">37</div>
+                            <div class="cell-configs">1</div>
+                            <div class="cell-modules">2</div>
                             <div class="cell-author">Creator</div>
                         </div>
                     </div>
-                    <div class="table-row">
+                    <div class="table-row" onclick="open007()"
+                    data-id="7" 
+                    data-color="1" 
+                    data-name="Walter White" 
+                    data-universe="Breaking Bad" 
+                    data-configs="1" 
+                    data-modules="1" 
+                    data-author="Creator">
                         <div class="col-5 row-left">
                             <div class="cell-id">
                                 <a>#007</a>
-                                <div class="cell-color"><div class="color-square green"></div></div>
+                                <div class="cell-color"><div class="color-square orange"></div></div>
                             </div>
-                            <div class="cell-name">Tyler Gregory Okonma</div>
-                            <div class="cell-universe">Real world</div>
+                            <div class="cell-name">Walter White</div>
+                            <div class="cell-universe">Breaking Bad</div>
                         </div>
                         <div class="col-3 row-right">
-                            <div class="cell-configs">13</div>
-                            <div class="cell-modules">37</div>
+                            <div class="cell-configs">1</div>
+                            <div class="cell-modules">1</div>
                             <div class="cell-author">Creator</div>
                         </div>
                     </div>
-                    <div class="table-row">
+                    <div class="table-row" onclick="open008()"
+                    data-id="8" 
+                    data-color="2" 
+                    data-name="Thomas Wesley Pentz" 
+                    data-universe="Real world" 
+                    data-configs="2" 
+                    data-modules="4" 
+                    data-author="Creator">
                         <div class="col-5 row-left">
                             <div class="cell-id">
                                 <a>#008</a>
-                                <div class="cell-color"><div class="color-square green"></div></div>
+                                <div class="cell-color"><div class="color-square yellow"></div></div>
                             </div>
-                            <div class="cell-name">Tyler Gregory Okonma</div>
+                            <div class="cell-name">Thomas Wesley Pentz</div>
                             <div class="cell-universe">Real world</div>
                         </div>
                         <div class="col-3 row-right">
-                            <div class="cell-configs">13</div>
-                            <div class="cell-modules">37</div>
+                            <div class="cell-configs">2</div>
+                            <div class="cell-modules">4</div>
                             <div class="cell-author">Creator</div>
                         </div>
                     </div>
-                    <div class="table-row">
+                    <div class="table-row" onclick="open009()"
+                    data-id="9" 
+                    data-color="3" 
+                    data-name="Miley Stewart" 
+                    data-universe="Hannah Montana" 
+                    data-configs="1" 
+                    data-modules="3" 
+                    data-author="Creator">
                         <div class="col-5 row-left">
                             <div class="cell-id">
                                 <a>#009</a>
                                 <div class="cell-color"><div class="color-square green"></div></div>
                             </div>
-                            <div class="cell-name">Tyler Gregory Okonma</div>
-                            <div class="cell-universe">Real world</div>
+                            <div class="cell-name">Miley Stewart</div>
+                            <div class="cell-universe">Hannah Montana</div>
                         </div>
                         <div class="col-3 row-right">
-                            <div class="cell-configs">13</div>
-                            <div class="cell-modules">37</div>
+                            <div class="cell-configs">1</div>
+                            <div class="cell-modules">3</div>
                             <div class="cell-author">Creator</div>
                         </div>
                     </div>
-                    <div class="table-row">
+                    <div class="table-row" onclick="open010()"
+                    data-id="10" 
+                    data-color="2" 
+                    data-name="Henry Creel" 
+                    data-universe="Stranger Things" 
+                    data-configs="1" 
+                    data-modules="3" 
+                    data-author="Creator">
                         <div class="col-5 row-left">
                             <div class="cell-id">
                                 <a>#010</a>
-                                <div class="cell-color"><div class="color-square green"></div></div>
+                                <div class="cell-color"><div class="color-square yellow"></div></div>
                             </div>
-                            <div class="cell-name">Tyler Gregory Okonma</div>
-                            <div class="cell-universe">Real world</div>
+                            <div class="cell-name">Henry Creel</div>
+                            <div class="cell-universe">Stranger Things</div>
                         </div>
                         <div class="col-3 row-right">
-                            <div class="cell-configs">13</div>
-                            <div class="cell-modules">37</div>
+                            <div class="cell-configs">1</div>
+                            <div class="cell-modules">3</div>
                             <div class="cell-author">Creator</div>
                         </div>
                     </div>
-                    <div class="table-row">
+                    <div class="table-row" onclick="open011()"
+                    data-id="11" 
+                    data-color="3" 
+                    data-name="RuPaul Andre Charles" 
+                    data-universe="Real world" 
+                    data-configs="1" 
+                    data-modules="3" 
+                    data-author="Creator">
                         <div class="col-5 row-left">
                             <div class="cell-id">
                                 <a>#011</a>
                                 <div class="cell-color"><div class="color-square green"></div></div>
                             </div>
-                            <div class="cell-name">Tyler Gregory Okonma</div>
+                            <div class="cell-name">RuPaul Andre Charles</div>
                             <div class="cell-universe">Real world</div>
                         </div>
                         <div class="col-3 row-right">
-                            <div class="cell-configs">13</div>
-                            <div class="cell-modules">37</div>
+                            <div class="cell-configs">1</div>
+                            <div class="cell-modules">3</div>
                             <div class="cell-author">Creator</div>
                         </div>
                     </div>
-                    <div class="table-row">
+                    <div class="table-row" onclick="open012()"
+                    data-id="12" 
+                    data-color="3" 
+                    data-name="Hank Pym" 
+                    data-universe="Marvel Comics" 
+                    data-configs="5" 
+                    data-modules="15" 
+                    data-author="User 05">
                         <div class="col-5 row-left">
                             <div class="cell-id">
                                 <a>#012</a>
                                 <div class="cell-color"><div class="color-square green"></div></div>
                             </div>
-                            <div class="cell-name">Tyler Gregory Okonma</div>
-                            <div class="cell-universe">Real world</div>
+                            <div class="cell-name">Hank Pym</div>
+                            <div class="cell-universe">Marvel Comics</div>
                         </div>
                         <div class="col-3 row-right">
-                            <div class="cell-configs">13</div>
-                            <div class="cell-modules">37</div>
-                            <div class="cell-author">Creator</div>
+                            <div class="cell-configs">5</div>
+                            <div class="cell-modules">15</div>
+                            <div class="cell-author">User 05</div>
                         </div>
                     </div>
-                    <div class="table-row">
+                    <div class="table-row" onclick="open013()"
+                    data-id="13" 
+                    data-color="4" 
+                    data-name="L" 
+                    data-universe="Death Note" 
+                    data-configs="?" 
+                    data-modules="1" 
+                    data-author="User 08">
                         <div class="col-5 row-left">
                             <div class="cell-id">
                                 <a>#013</a>
-                                <div class="cell-color"><div class="color-square green"></div></div>
+                                <div class="cell-color"><div class="color-square purple"></div></div>
                             </div>
-                            <div class="cell-name">Tyler Gregory Okonma</div>
-                            <div class="cell-universe">Real world</div>
+                            <div class="cell-name">L</div>
+                            <div class="cell-universe">Death Note</div>
                         </div>
                         <div class="col-3 row-right">
-                            <div class="cell-configs">13</div>
-                            <div class="cell-modules">37</div>
-                            <div class="cell-author">Creator</div>
+                            <div class="cell-configs">?</div>
+                            <div class="cell-modules">1</div>
+                            <div class="cell-author">User 08</div>
                         </div>
                     </div>
-                    <div class="table-row">
+                    <div class="table-row" onclick="open014()"
+                    data-id="14" 
+                    data-color="3" 
+                    data-name="Perry The Platypus" 
+                    data-universe="Phineas and Ferb" 
+                    data-configs="1" 
+                    data-modules="3" 
+                    data-author="User 07">
                         <div class="col-5 row-left">
                             <div class="cell-id">
                                 <a>#014</a>
                                 <div class="cell-color"><div class="color-square green"></div></div>
                             </div>
-                            <div class="cell-name">Tyler Gregory Okonma</div>
-                            <div class="cell-universe">Real world</div>
+                            <div class="cell-name">Perry The Platypus</div>
+                            <div class="cell-universe">Phineas and Ferb</div>
                         </div>
                         <div class="col-3 row-right">
-                            <div class="cell-configs">13</div>
-                            <div class="cell-modules">37</div>
-                            <div class="cell-author">Creator</div>
+                            <div class="cell-configs">1</div>
+                            <div class="cell-modules">3</div>
+                            <div class="cell-author">User 07</div>
                         </div>
                     </div>
-                    <div class="table-row">
+                    <div class="table-row" onclick="open015()"
+                    data-id="15" 
+                    data-color="3" 
+                    data-name="Marinette Dupain Cheng" 
+                    data-universe="Miraculous Ladybug" 
+                    data-configs="1" 
+                    data-modules="3" 
+                    data-author="User 07">
                         <div class="col-5 row-left">
                             <div class="cell-id">
                                 <a>#015</a>
                                 <div class="cell-color"><div class="color-square green"></div></div>
                             </div>
-                            <div class="cell-name">Tyler Gregory Okonma</div>
-                            <div class="cell-universe">Real world</div>
+                            <div class="cell-name">Marinette Dupain Cheng</div>
+                            <div class="cell-universe">Miraculous Ladybug</div>
                         </div>
                         <div class="col-3 row-right">
-                            <div class="cell-configs">13</div>
-                            <div class="cell-modules">37</div>
-                            <div class="cell-author">Creator</div>
-                        </div>
-                    </div>
-                    <div class="table-row">
-                        <div class="col-5 row-left">
-                            <div class="cell-id">
-                                <a>#016</a>
-                                <div class="cell-color"><div class="color-square green"></div></div>
-                            </div>
-                            <div class="cell-name">Tyler Gregory Okonma</div>
-                            <div class="cell-universe">Real world</div>
-                        </div>
-                        <div class="col-3 row-right">
-                            <div class="cell-configs">13</div>
-                            <div class="cell-modules">37</div>
-                            <div class="cell-author">Creator</div>
-                        </div>
-                    </div>
-                    <div class="table-row">
-                        <div class="col-5 row-left">
-                            <div class="cell-id">
-                                <a>#017</a>
-                                <div class="cell-color"><div class="color-square green"></div></div>
-                            </div>
-                            <div class="cell-name">Tyler Gregory Okonma</div>
-                            <div class="cell-universe">Real world</div>
-                        </div>
-                        <div class="col-3 row-right">
-                            <div class="cell-configs">13</div>
-                            <div class="cell-modules">37</div>
-                            <div class="cell-author">Creator</div>
+                            <div class="cell-configs">1</div>
+                            <div class="cell-modules">3</div>
+                            <div class="cell-author">User 07</div>
                         </div>
                     </div>
                 </div>                
@@ -681,8 +743,22 @@
     }
 
      .table-header a{
-         opacity: 0.5;
-     }
+        opacity: 0.5;
+        transition: opacity 0.3s;
+    }
+
+    .table-header div.active-sort a {
+        opacity: 1 !important;
+    }
+
+    .active-sort a {
+        opacity: 1 !important;
+    }
+
+    /* Assicurati che il selettore hover non entri in conflitto */
+    .table-header div[onclick] {
+        cursor: pointer;
+    }
 
     #table-body {
         width: 100%;
@@ -741,6 +817,16 @@
     .cell-name { width: 40%; }
     .cell-universe { width: 40%; }
 
+    .cell-id.active-id a {
+        opacity: 1 !important;
+    }
+
+    /* Stato 2: Colore attivo (solo il quadrato diventa nero) */
+    .cell-id.active-color .color-square {
+        background-color: black !important;
+        opacity: 1 !important;
+    }
+
     /* Distribuzione larghezze interne al blocco 37.5% */
     .cell-configs { width: 33.3%; }
     .cell-modules { width: 33.3%; }
@@ -756,6 +842,15 @@
     .color-square{
         width: 1vw;
         height: 1vw;
+        transition: background-color 0.3s;
+    }
+
+    .active-square {
+        background-color: black !important;
+    }
+
+    .color-square.active-square {
+        background-color: black;
     }
 
     .green { background-color: #00BC72; }
@@ -763,6 +858,7 @@
     .orange { background-color: #FC5C18; }
     .yellow { background-color: #FFCC00; }
     .grey { background-color: #D9D9D9;}
+    .black { background-color: black !important; }
 
 
 
@@ -984,48 +1080,132 @@
         window.location.href = './002.html';
     }
 
-    document.querySelectorAll(".icon").forEach(image => {
-    image.addEventListener("click", () => {
-        const link = image.getAttribute("data-link"); // Leggi il link dal data-link
-        window.open(link, "_blank"); // Apri il link in una nuova scheda
-    });
-});
-
-let currentSort = { column: null, ascending: true };
-
-function sortTable(column) {
-    const body = document.getElementById('table-body');
-    const rows = Array.from(body.querySelectorAll('.table-row'));
-    
-    // Determina se invertire l'ordine o resettare
-    if (currentSort.column === column) {
-        currentSort.ascending = !currentSort.ascending;
-    } else {
-        currentSort.column = column;
-        currentSort.ascending = true;
+    function open003() {
+        window.location.href = './003.html';
     }
 
-    rows.sort((a, b) => {
-        let valA = a.getAttribute(`data-${column}`);
-        let valB = b.getAttribute(`data-${column}`);
+    function open004() {
+        window.location.href = './004.html';
+    }
 
-        // Converte in numero se possibile
-        if (!isNaN(valA) && !isNaN(valB)) {
-            valA = parseFloat(valA);
-            valB = parseFloat(valB);
-        } else {
-            valA = valA.toLowerCase();
-            valB = valB.toLowerCase();
-        }
+    function open005() {
+        window.location.href = './005.html';
+    }
 
-        if (valA < valB) return currentSort.ascending ? -1 : 1;
-        if (valA > valB) return currentSort.ascending ? 1 : -1;
-        return 0;
+    function open006() {
+        window.location.href = './006.html';
+    }
+
+    function open007() {
+        window.location.href = './007.html';
+    }
+
+    function open008() {
+        window.location.href = './008.html';
+    }
+
+    function open009() {
+        window.location.href = './009.html';
+    }
+
+    function open010() {
+        window.location.href = './010.html';
+    }
+
+    function open011() {
+        window.location.href = './011.html';
+    }
+
+    function open012() {
+        window.location.href = './012.html';
+    }
+
+    function open013() {
+        window.location.href = './013.html';
+    }
+
+    function open014() {
+        window.location.href = './014.html';
+    }
+
+    function open015() {
+        window.location.href = './015.html';
+    }
+
+    document.querySelectorAll(".icon").forEach(image => {
+        image.addEventListener("click", () => {
+            const link = image.getAttribute("data-link"); // Leggi il link dal data-link
+            window.open(link, "_blank"); // Apri il link in una nuova scheda
+        });
     });
 
-    // Svuota e reinserisce le righe ordinate
-    body.innerHTML = "";
-    rows.forEach(row => body.appendChild(row));
-}
+    let currentSort = { column: null, ascending: true };
+
+    function sortTable(column) {
+        const body = document.getElementById('table-body');
+        const rows = Array.from(body.querySelectorAll('.table-row'));
+        
+        // 1. RESET TOTALE
+        // Rimuove tutte le classi di stato attivo da ogni intestazione
+        document.querySelectorAll('.table-header [class^="cell-"]').forEach(el => {
+            el.classList.remove('active-sort', 'active-id', 'active-color');
+        });
+        
+        // Ripristina il quadratino dell'header a grigio
+        const headerSquare = document.querySelector('.table-header .color-square');
+        if (headerSquare) {
+            headerSquare.style.backgroundColor = ''; // Torna al grigio del CSS
+        }
+
+        // 2. LOGICA VISIVA SPECIFICA
+        if (column === 'id') {
+            const cellId = document.querySelector('.cell-id');
+            cellId.classList.add('active-id'); // Accende solo il testo "ID"
+        } 
+        else if (column === 'color') {
+            const cellId = document.querySelector('.cell-id');
+            cellId.classList.add('active-color'); // Il CSS renderà nero il quadrato
+        } 
+        else {
+            // Per tutte le altre colonne (Name, Universe, ecc.)
+            const targetHeader = document.querySelector(`.cell-${column}`);
+            if (targetHeader) targetHeader.classList.add('active-sort');
+        }
+
+        // 3. LOGICA DI ORDINAMENTO (Invariata)
+        if (currentSort.column === column) {
+            currentSort.ascending = !currentSort.ascending;
+        } else {
+            currentSort.column = column;
+            currentSort.ascending = true;
+        }
+
+        rows.sort((a, b) => {
+            let valA = a.getAttribute(`data-${column}`);
+            let valB = b.getAttribute(`data-${column}`);
+            let idA = parseInt(a.getAttribute('data-id'));
+            let idB = parseInt(b.getAttribute('data-id'));
+
+            if (!isNaN(valA) && !isNaN(valB)) {
+                valA = parseFloat(valA);
+                valB = parseFloat(valB);
+            } else {
+                valA = (valA || "").toLowerCase();
+                valB = (valB || "").toLowerCase();
+            }
+
+            if (valA < valB) return currentSort.ascending ? -1 : 1;
+            if (valA > valB) return currentSort.ascending ? 1 : -1;
+            return idA - idB; 
+        });
+
+        body.innerHTML = "";
+        rows.forEach(row => body.appendChild(row));
+
+        body.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Rende il ritorno in cima fluido
+        });
+    }
 </script>
 </html>
