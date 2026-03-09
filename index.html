@@ -457,6 +457,13 @@
     </div>
 </body>
 <style>
+    #table-body, .col-5, .col-3 {
+        scroll-behavior: smooth;
+        /* Mantiene le altre proprietà che hai già */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
     body {
         width: 100vw;
         height: 100vh; /* Blocca l'altezza alla finestra del browser */
