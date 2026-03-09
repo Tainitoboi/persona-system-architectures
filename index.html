@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div id="table-body">
-                    <div class="table-row" onclick="open001()" 
+                    <div class="table-row" onclick="openPage('001')" 
                         data-id="1" 
                         data-color="3" 
                         data-name="Tyler Gregory Okonma" 
@@ -87,7 +87,7 @@
                             <div class="cell-author">Creator</div>
                         </div>
                     </div>
-                    <div class="table-row" onclick="open002()"
+                    <div class="table-row" onclick="openPage('002')"
                         data-id="2" 
                         data-color="3" 
                         data-name="Davide Mattei" 
@@ -113,7 +113,7 @@
                             <div class="cell-author">Creator</div>
                         </div>
                     </div>
-                    <div class="table-row" onclick="open003()"
+                    <div class="table-row" onclick="openPage('003')"
                         data-id="3" 
                         data-color="4" 
                         data-name="Spider-Man" 
@@ -139,7 +139,7 @@
                             <div class="cell-author">Creator</div>
                         </div>
                     </div>
-                    <div class="table-row" onclick="open004()"
+                    <div class="table-row" onclick="openPage('004')"
                         data-id="4" 
                         data-color="2" 
                         data-name="Christopher Edwin Breaux" 
@@ -165,7 +165,7 @@
                             <div class="cell-author">User 12</div>
                         </div>
                     </div>
-                    <div class="table-row" onclick="open005()"
+                    <div class="table-row" onclick="openPage('005')"
                         data-id="5" 
                         data-color="2" 
                         data-name="Pharrell Lanscilo Williams" 
@@ -191,7 +191,7 @@
                             <div class="cell-author">Creator</div>
                         </div>
                     </div>
-                    <div class="table-row" onclick="open006()"
+                    <div class="table-row" onclick="openPage('006')"
                         data-id="6" 
                         data-color="2" 
                         data-name="Light Yagami" 
@@ -217,7 +217,7 @@
                             <div class="cell-author">Creator</div>
                         </div>
                     </div>
-                    <div class="table-row" onclick="open007()"
+                    <div class="table-row" onclick="openPage('007')"
                         data-id="7" 
                         data-color="1" 
                         data-name="Walter White" 
@@ -243,7 +243,7 @@
                             <div class="cell-author">Creator</div>
                         </div>
                     </div>
-                    <div class="table-row" onclick="open008()"
+                    <div class="table-row" onclick="openPage('008')"
                         data-id="8" 
                         data-color="2" 
                         data-name="Thomas Wesley Pentz" 
@@ -269,7 +269,7 @@
                             <div class="cell-author">Creator</div>
                         </div>
                     </div>
-                    <div class="table-row" onclick="open009()"
+                    <div class="table-row" onclick="openPage('009')"
                         data-id="9" 
                         data-color="3" 
                         data-name="Miley Stewart" 
@@ -295,7 +295,7 @@
                             <div class="cell-author">Creator</div>
                         </div>
                     </div>
-                    <div class="table-row" onclick="open010()"
+                    <div class="table-row" onclick="openPage('010')"
                         data-id="10" 
                         data-color="2" 
                         data-name="Henry Creel" 
@@ -321,7 +321,7 @@
                             <div class="cell-author">Creator</div>
                         </div>
                     </div>
-                    <div class="table-row" onclick="open011()"
+                    <div class="table-row" onclick="openPage('011')"
                         data-id="11" 
                         data-color="3" 
                         data-name="RuPaul Andre Charles" 
@@ -347,7 +347,7 @@
                             <div class="cell-author">Creator</div>
                         </div>
                     </div>
-                    <div class="table-row" onclick="open012()"
+                    <div class="table-row" onclick="openPage('012')"
                         data-id="12" 
                         data-color="3" 
                         data-name="Hank Pym" 
@@ -373,7 +373,7 @@
                             <div class="cell-author">User 05</div>
                         </div>
                     </div>
-                    <div class="table-row" onclick="open013()"
+                    <div class="table-row" onclick="openPage('013')"
                         data-id="13" 
                         data-color="4" 
                         data-name="L" 
@@ -399,7 +399,7 @@
                             <div class="cell-author">User 08</div>
                         </div>
                     </div>
-                    <div class="table-row" onclick="open014()"
+                    <div class="table-row" onclick="openPage('014')"
                         data-id="14" 
                         data-color="3" 
                         data-name="Perry The Platypus" 
@@ -425,7 +425,7 @@
                             <div class="cell-author">User 07</div>
                         </div>
                     </div>
-                    <div class="table-row" onclick="open015()"
+                    <div class="table-row" onclick="openPage('015')"
                         data-id="15" 
                         data-color="3" 
                         data-name="Marinette Dupain Cheng" 
@@ -834,9 +834,10 @@
 
     #table-body {
         width: 100%;
-        overflow-y: auto; /* Attiva lo scroll verticale */
+        overflow-y: auto;
         display: flex;
         flex-direction: column;
+        scrollbar-width: none;
     }
 
     /* Nascondi la barra di scorrimento (opzionale, per estetica) */
@@ -947,12 +948,6 @@
     .cell-configs { width: 33.3%; }
     .cell-modules { width: 33.3%; }
     .cell-author { width: 33.3%; }
-
-    #table-body {
-        width: 100%;
-        overflow-y: auto;
-        scrollbar-width: none;
-    }
 
     #table-body::-webkit-scrollbar { display: none; }
 
@@ -1138,8 +1133,6 @@
 
 <script>
 
-    body.scrollTo({ top: 0, behavior: 'smooth' });
-
     function toggleContent(section) {
         // 1. Nascondi tutti i testi
         const contents = document.querySelectorAll('.tab-content');
@@ -1191,64 +1184,8 @@
         window.location.href = './research.html';
     }
 
-    function open001() {
-        window.location.href = './001.html';
-    }
-
-    function open002() {
-        window.location.href = './002.html';
-    }
-
-    function open003() {
-        window.location.href = './003.html';
-    }
-
-    function open004() {
-        window.location.href = './004.html';
-    }
-
-    function open005() {
-        window.location.href = './005.html';
-    }
-
-    function open006() {
-        window.location.href = './006.html';
-    }
-
-    function open007() {
-        window.location.href = './007.html';
-    }
-
-    function open008() {
-        window.location.href = './008.html';
-    }
-
-    function open009() {
-        window.location.href = './009.html';
-    }
-
-    function open010() {
-        window.location.href = './010.html';
-    }
-
-    function open011() {
-        window.location.href = './011.html';
-    }
-
-    function open012() {
-        window.location.href = './012.html';
-    }
-
-    function open013() {
-        window.location.href = './013.html';
-    }
-
-    function open014() {
-        window.location.href = './014.html';
-    }
-
-    function open015() {
-        window.location.href = './015.html';
+    function openPage(id) {
+        window.location.href = `./${id}.html`;
     }
 
     document.querySelectorAll(".icon").forEach(image => {
