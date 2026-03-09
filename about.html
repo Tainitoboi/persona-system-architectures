@@ -2,8 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stop The Loop</title>
-    <link rel="icon" type="image/x-icon" href="./icons/syncro_favicon.png">
+    <title>Persona System Architectures</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sora:wght@100..800&display=swap" rel="stylesheet">
@@ -27,43 +27,48 @@
                     </div>
                 </div>
                 <div class="column-scroll-content">
-                    <img src="./images/about/mockup_1.png">
-                    <img src="./images/about/mockup_2.png">
+                    <div id="img-info" class="img-tab-content">
+                        <img src="./images/about/mockup_1.png">
+                        <img src="./images/about/mockup_2.png">
+                    </div>
                     <div class="spacer"></div>
                 </div>
             </div>
             <div class="col-3" id="content">
-                <div class="column-navbar">
-                    <div class="nav-content">
-                        <a href="javascript:void(0)" id="btn-info" class="tab-link active" onclick="toggleContent('info')">Info</a>
-                        <span id="sep-1" class="separator"> / </span>
-                        <a href="javascript:void(0)" id="btn-class" class="tab-link" onclick="toggleContent('class')">Classification</a>
-                        <span id="sep-2" class="separator"> / </span>
-                        <a href="javascript:void(0)" id="btn-credits" class="tab-link" onclick="toggleContent('credits')">Credits</a>
+                <div class="section-scrollable">
+                    <div class="column-navbar">
+                        <div class="nav-content">
+                            <a href="javascript:void(0)" id="btn-info" class="tab-link active" onclick="toggleContent('info')">Info</a>
+                            <span id="sep-1" class="separator"> / </span>
+                            <a href="javascript:void(0)" id="btn-class" class="tab-link" onclick="toggleContent('class')">Classification</a>
+                            <span id="sep-2" class="separator"> / </span>
+                            <a href="javascript:void(0)" id="btn-credits" class="tab-link" onclick="toggleContent('credits')">Credits</a>
+                        </div>
                     </div>
-                </div>
-                <div class="column-scroll-content">
-                    <div class="single-p-mix">
-                        <div id="text-info" class="tab-content">
-                            <p>Persona System Architectures is a digital archive designed to map and analyze identity structures through the methodological lens of the Persona System Design framework.
-                            The platform operates as both a research device and an exploratory interface, aimed at making visible the systemic and modular nature of personal identity configurations.</p>
-                            <p>The archive gathers case studies drawn from heterogeneous contexts, including public figures, fictional characters, artistic personas and mediated identities selected for their 
-                            capacity to exemplify complex identity constructions. Rather than offering biographical descriptions, the website focuses on structural analysis, examining how identities are articulated, 
-                            projected, and organized across different dimensions.</p>
-                            <p>Each entry is presented as an identity architecture. The goal of the platform is not to prescribe how identities should be constructed, but to provide a conceptual and analytical tool
-                                through which identity systems can be observed, compared, and critically interpreted. By translating theoretical research into a navigable digital environment, the archive bridges 
-                                conceptual reflection and design practice.</p>
-                            <p>Conceived as an expandable system, the website supports comparative exploration and pattern recognition across cases. As identity configurations continuously evolve 
-                            within contemporary media environments, the archive remains open to future implementation and theoretical refinement.</p>
-                        </div>
-                        
-                        <div id="text-class" class="tab-content" style="display:none;">
-                            <p>Il sistema di classificazione si basa su parametri modulari definiti nel capitolo VI, 
-                            assegnando livelli di completezza tramite codici colore (Verde, Blu, Rosa, Viola).</p>
-                        </div>
+                    <div class="scrollable-text-content">
+                        <div class="single-p-mix">
+                            <div id="text-info" class="tab-content">
+                                <p>Persona System Architectures is a digital archive designed to map and analyze identity structures through the methodological lens of the Persona System Design framework.
+                                The platform operates as both a research device and an exploratory interface, aimed at making visible the systemic and modular nature of personal identity configurations.</p>
+                                <p>The archive gathers case studies drawn from heterogeneous contexts, including public figures, fictional characters, artistic personas and mediated identities selected for their 
+                                capacity to exemplify complex identity constructions. Rather than offering biographical descriptions, the website focuses on structural analysis, examining how identities are articulated, 
+                                projected, and organized across different dimensions.</p>
+                                <p>Each entry is presented as an identity architecture. The goal of the platform is not to prescribe how identities should be constructed, but to provide a conceptual and analytical tool
+                                    through which identity systems can be observed, compared, and critically interpreted. By translating theoretical research into a navigable digital environment, the archive bridges 
+                                    conceptual reflection and design practice.</p>
+                                <p>Conceived as an expandable system, the website supports comparative exploration and pattern recognition across cases. As identity configurations continuously evolve 
+                                within contemporary media environments, the archive remains open to future implementation and theoretical refinement.</p>
+                            </div>
+                            
+                            <div id="text-class" class="tab-content" style="display:none;">
+                                <p>Il sistema di classificazione si basa su parametri modulari definiti nel capitolo VI, 
+                                assegnando livelli di completezza tramite codici colore (Verde, Blu, Rosa, Viola).</p>
+                            </div>
 
-                        <div id="text-credits" class="tab-content" style="display:none;">
-                            <p>Progetto di Tesi di: [Tuo Nome]<br>Relatore: [Nome Relatore]<br>Font utilizzati: Sora, Open Sans.</p>
+                            <div id="text-credits" class="tab-content" style="display:none;">
+                                <p>Progetto di Tesi di: [Tuo Nome]<br>Relatore: [Nome Relatore]<br>Font utilizzati: Sora, Open Sans.</p>
+                            </div>
+                            <div class="spacer"></div>
                         </div>
                     </div>
                 </div>
@@ -159,7 +164,7 @@
         align-items: center;
         box-sizing: border-box;
         flex-shrink: 0;
-        margin-bottom: 2vh;
+        margin-bottom: 0;
     }
 
     #container {
@@ -229,6 +234,13 @@
         flex-direction: column;
     }
 
+    .img-tab-content{
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+        padding-top: 2vh;
+    }
+
     h2 {
         font-size: 1.2vw;
         font-family: sora;
@@ -259,19 +271,22 @@
         line-height: 1.3vw;
     }
 
-    /* 2. Applica il rientro SOLO ai paragrafi che seguono un altro paragrafo */
     #content p + p {
         text-indent: 2.5vw; /* Regola la profondità del rientro */
         margin-top: -1.5vh;  /* Opzionale: avvicina i paragrafi rientrati per un look editoriale */
     }
 
-    #content .single-p-mix{
+    #content p:last-of-type {
+        margin-bottom: 0;
+    }
+
+    #content .single-p-mix {
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: start;
         align-items: flex-start;
-        gap: 1vw;
+        padding-top: 2vh;
     }
 
     .column-navbar .nav-content a {
@@ -323,10 +338,6 @@
     /* 3. Stato attivo: passa al 100% */
     .tab-link.active, .separator.active {
         opacity: 1 !important; /* !important assicura che vinca su altre regole */
-    }
-
-    .tab-link.active {
-
     }
 
     @keyframes fadeIn {
