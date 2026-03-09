@@ -2,8 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stop The Loop</title>
-    <link rel="icon" type="image/x-icon" href="./icons/syncro_favicon.png">
+    <title>Persona System Architectures</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sora:wght@100..800&display=swap" rel="stylesheet">
@@ -43,8 +43,14 @@
                 <div class="table-header">
                     <div class="col-5 header-left">
                         <div class="cell-id">
-                            <a onclick="sortTable('id')">ID</a>
-                            <div class="cell-color"><div class="color-square grey" onclick="sortTable('color')"></div></div>
+                            <div class="id-group">
+                                <a onclick="sortTable('id')">ID</a>
+                                </div>
+                            <div class="color-group">
+                                <div class="cell-color">
+                                    <div class="color-square grey" onclick="sortTable('color')"></div>
+                                </div>
+                            </div>
                         </div>
                         <div class="cell-name" onclick="sortTable('name')"><a>Name</a></div> <div class="cell-universe" onclick="sortTable('universe')"><a>Origin universe</a></div>
                     </div>
@@ -56,17 +62,21 @@
                 </div>
                 <div id="table-body">
                     <div class="table-row" onclick="open001()" 
-                    data-id="1" 
-                    data-color="3" 
-                    data-name="Tyler Gregory Okonma" 
-                    data-universe="Real world" 
-                    data-configs="13" 
-                    data-modules="37" 
-                    data-author="Creator">
+                        data-id="1" 
+                        data-color="3" 
+                        data-name="Tyler Gregory Okonma" 
+                        data-universe="Real world" 
+                        data-configs="13" 
+                        data-modules="37" 
+                        data-author="Creator">
                         <div class="col-5 row-left">
                             <div class="cell-id">
-                                <a>#001</a>
-                                <div class="cell-color"><div class="color-square green"></div></div>
+                                <div class="id-group">
+                                    <a>#001</a>
+                                </div>
+                                <div class="color-group">
+                                    <div class="cell-color"><div class="color-square green"></div></div>
+                                </div>
                             </div>
                             <div class="cell-name">Tyler Gregory Okonma</div>
                             <div class="cell-universe">Real world</div>
@@ -78,17 +88,21 @@
                         </div>
                     </div>
                     <div class="table-row" onclick="open002()"
-                    data-id="2" 
-                    data-color="3" 
-                    data-name="Davide Mattei" 
-                    data-universe="Real world" 
-                    data-configs="3" 
-                    data-modules="7" 
-                    data-author="Creator">
+                        data-id="2" 
+                        data-color="3" 
+                        data-name="Davide Mattei" 
+                        data-universe="Real world" 
+                        data-configs="3" 
+                        data-modules="7" 
+                        data-author="Creator">
                         <div class="col-5 row-left">
                             <div class="cell-id">
-                                <a>#002</a>
-                                <div class="cell-color"><div class="color-square green"></div></div>
+                                <div class="id-group">
+                                    <a>#002</a>
+                                </div>
+                                <div class="color-group">
+                                    <div class="cell-color"><div class="color-square green"></div></div>
+                                </div>
                             </div>
                             <div class="cell-name">Davide Mattei</div>
                             <div class="cell-universe">Real world</div>
@@ -100,17 +114,21 @@
                         </div>
                     </div>
                     <div class="table-row" onclick="open003()"
-                    data-id="3" 
-                    data-color="4" 
-                    data-name="Spider-Man" 
-                    data-universe="Marvel Comics" 
-                    data-configs="8" 
-                    data-modules="14" 
-                    data-author="Creator">
+                        data-id="3" 
+                        data-color="4" 
+                        data-name="Spider-Man" 
+                        data-universe="Marvel Comics" 
+                        data-configs="8" 
+                        data-modules="14" 
+                        data-author="Creator">
                         <div class="col-5 row-left">
                             <div class="cell-id">
-                                <a>#003</a>
-                                <div class="cell-color"><div class="color-square purple"></div></div>
+                                <div class="id-group">
+                                    <a>#003</a>
+                                </div>
+                                <div class="color-group">
+                                    <div class="cell-color"><div class="color-square purple"></div></div>
+                                </div>
                             </div>
                             <div class="cell-name">Spider-Man</div>
                             <div class="cell-universe">Marvel Comics</div>
@@ -122,17 +140,21 @@
                         </div>
                     </div>
                     <div class="table-row" onclick="open004()"
-                    data-id="4" 
-                    data-color="2" 
-                    data-name="Christopher Edwin Breaux" 
-                    data-universe="Real world" 
-                    data-configs="3" 
-                    data-modules="6" 
-                    data-author="User 12">
+                        data-id="4" 
+                        data-color="2" 
+                        data-name="Christopher Edwin Breaux" 
+                        data-universe="Real world" 
+                        data-configs="3" 
+                        data-modules="6" 
+                        data-author="User 12">
                         <div class="col-5 row-left">
                             <div class="cell-id">
-                                <a>#004</a>
-                                <div class="cell-color"><div class="color-square yellow"></div></div>
+                                <div class="id-group">
+                                    <a>#004</a>
+                                </div>
+                                <div class="color-group">
+                                    <div class="cell-color"><div class="color-square yellow"></div></div>
+                                </div>
                             </div>
                             <div class="cell-name">Christopher Edwin Breaux</div>
                             <div class="cell-universe">Real world</div>
@@ -144,17 +166,21 @@
                         </div>
                     </div>
                     <div class="table-row" onclick="open005()"
-                    data-id="5" 
-                    data-color="2" 
-                    data-name="Pharrell Lanscilo Williams" 
-                    data-universe="Real world" 
-                    data-configs="3" 
-                    data-modules="5" 
-                    data-author="Creator">
+                        data-id="5" 
+                        data-color="2" 
+                        data-name="Pharrell Lanscilo Williams" 
+                        data-universe="Real world" 
+                        data-configs="3" 
+                        data-modules="5" 
+                        data-author="Creator">
                         <div class="col-5 row-left">
                             <div class="cell-id">
-                                <a>#005</a>
-                                <div class="cell-color"><div class="color-square yellow"></div></div>
+                                <div class="id-group">
+                                    <a>#005</a>
+                                </div>
+                                <div class="color-group">
+                                    <div class="cell-color"><div class="color-square yellow"></div></div>
+                                </div>
                             </div>
                             <div class="cell-name">Pharrell Lanscilo Williams</div>
                             <div class="cell-universe">Real world</div>
@@ -166,17 +192,21 @@
                         </div>
                     </div>
                     <div class="table-row" onclick="open006()"
-                    data-id="6" 
-                    data-color="2" 
-                    data-name="Light Yagami" 
-                    data-universe="Death Note" 
-                    data-configs="1" 
-                    data-modules="2" 
-                    data-author="Creator">
+                        data-id="6" 
+                        data-color="2" 
+                        data-name="Light Yagami" 
+                        data-universe="Death Note" 
+                        data-configs="1" 
+                        data-modules="2" 
+                        data-author="Creator">
                         <div class="col-5 row-left">
                             <div class="cell-id">
-                                <a>#006</a>
-                                <div class="cell-color"><div class="color-square yellow"></div></div>
+                                <div class="id-group">
+                                    <a>#006</a>
+                                </div>
+                                <div class="color-group">
+                                    <div class="cell-color"><div class="color-square yellow"></div></div>
+                                </div>
                             </div>
                             <div class="cell-name">Light Yagami</div>
                             <div class="cell-universe">Death Note</div>
@@ -188,17 +218,21 @@
                         </div>
                     </div>
                     <div class="table-row" onclick="open007()"
-                    data-id="7" 
-                    data-color="1" 
-                    data-name="Walter White" 
-                    data-universe="Breaking Bad" 
-                    data-configs="1" 
-                    data-modules="1" 
-                    data-author="Creator">
+                        data-id="7" 
+                        data-color="1" 
+                        data-name="Walter White" 
+                        data-universe="Breaking Bad" 
+                        data-configs="1" 
+                        data-modules="1" 
+                        data-author="Creator">
                         <div class="col-5 row-left">
                             <div class="cell-id">
-                                <a>#007</a>
-                                <div class="cell-color"><div class="color-square orange"></div></div>
+                                <div class="id-group">
+                                    <a>#007</a>
+                                </div>
+                                <div class="color-group">
+                                    <div class="cell-color"><div class="color-square orange"></div></div>
+                                </div>
                             </div>
                             <div class="cell-name">Walter White</div>
                             <div class="cell-universe">Breaking Bad</div>
@@ -210,17 +244,21 @@
                         </div>
                     </div>
                     <div class="table-row" onclick="open008()"
-                    data-id="8" 
-                    data-color="2" 
-                    data-name="Thomas Wesley Pentz" 
-                    data-universe="Real world" 
-                    data-configs="2" 
-                    data-modules="4" 
-                    data-author="Creator">
+                        data-id="8" 
+                        data-color="2" 
+                        data-name="Thomas Wesley Pentz" 
+                        data-universe="Real world" 
+                        data-configs="2" 
+                        data-modules="4" 
+                        data-author="Creator">
                         <div class="col-5 row-left">
                             <div class="cell-id">
-                                <a>#008</a>
-                                <div class="cell-color"><div class="color-square yellow"></div></div>
+                                <div class="id-group">
+                                    <a>#008</a>
+                                </div>
+                                <div class="color-group">
+                                    <div class="cell-color"><div class="color-square yellow"></div></div>
+                                </div>
                             </div>
                             <div class="cell-name">Thomas Wesley Pentz</div>
                             <div class="cell-universe">Real world</div>
@@ -232,17 +270,21 @@
                         </div>
                     </div>
                     <div class="table-row" onclick="open009()"
-                    data-id="9" 
-                    data-color="3" 
-                    data-name="Miley Stewart" 
-                    data-universe="Hannah Montana" 
-                    data-configs="1" 
-                    data-modules="3" 
-                    data-author="Creator">
+                        data-id="9" 
+                        data-color="3" 
+                        data-name="Miley Stewart" 
+                        data-universe="Hannah Montana" 
+                        data-configs="1" 
+                        data-modules="3" 
+                        data-author="Creator">
                         <div class="col-5 row-left">
                             <div class="cell-id">
-                                <a>#009</a>
-                                <div class="cell-color"><div class="color-square green"></div></div>
+                                <div class="id-group">
+                                    <a>#009</a>
+                                </div>
+                                <div class="color-group">
+                                    <div class="cell-color"><div class="color-square green"></div></div>
+                                </div>
                             </div>
                             <div class="cell-name">Miley Stewart</div>
                             <div class="cell-universe">Hannah Montana</div>
@@ -254,17 +296,21 @@
                         </div>
                     </div>
                     <div class="table-row" onclick="open010()"
-                    data-id="10" 
-                    data-color="2" 
-                    data-name="Henry Creel" 
-                    data-universe="Stranger Things" 
-                    data-configs="1" 
-                    data-modules="3" 
-                    data-author="Creator">
+                        data-id="10" 
+                        data-color="2" 
+                        data-name="Henry Creel" 
+                        data-universe="Stranger Things" 
+                        data-configs="1" 
+                        data-modules="3" 
+                        data-author="Creator">
                         <div class="col-5 row-left">
                             <div class="cell-id">
-                                <a>#010</a>
-                                <div class="cell-color"><div class="color-square yellow"></div></div>
+                                <div class="id-group">
+                                    <a>#010</a>
+                                </div>
+                                <div class="color-group">
+                                    <div class="cell-color"><div class="color-square yellow"></div></div>
+                                </div>
                             </div>
                             <div class="cell-name">Henry Creel</div>
                             <div class="cell-universe">Stranger Things</div>
@@ -276,17 +322,21 @@
                         </div>
                     </div>
                     <div class="table-row" onclick="open011()"
-                    data-id="11" 
-                    data-color="3" 
-                    data-name="RuPaul Andre Charles" 
-                    data-universe="Real world" 
-                    data-configs="1" 
-                    data-modules="3" 
-                    data-author="Creator">
+                        data-id="11" 
+                        data-color="3" 
+                        data-name="RuPaul Andre Charles" 
+                        data-universe="Real world" 
+                        data-configs="1" 
+                        data-modules="3" 
+                        data-author="Creator">
                         <div class="col-5 row-left">
                             <div class="cell-id">
-                                <a>#011</a>
-                                <div class="cell-color"><div class="color-square green"></div></div>
+                                <div class="id-group">
+                                    <a>#011</a>
+                                </div>
+                                <div class="color-group">
+                                    <div class="cell-color"><div class="color-square green"></div></div>
+                                </div>
                             </div>
                             <div class="cell-name">RuPaul Andre Charles</div>
                             <div class="cell-universe">Real world</div>
@@ -298,17 +348,21 @@
                         </div>
                     </div>
                     <div class="table-row" onclick="open012()"
-                    data-id="12" 
-                    data-color="3" 
-                    data-name="Hank Pym" 
-                    data-universe="Marvel Comics" 
-                    data-configs="5" 
-                    data-modules="15" 
-                    data-author="User 05">
+                        data-id="12" 
+                        data-color="3" 
+                        data-name="Hank Pym" 
+                        data-universe="Marvel Comics" 
+                        data-configs="5" 
+                        data-modules="15" 
+                        data-author="User 05">
                         <div class="col-5 row-left">
                             <div class="cell-id">
-                                <a>#012</a>
-                                <div class="cell-color"><div class="color-square green"></div></div>
+                                <div class="id-group">
+                                    <a>#012</a>
+                                </div>
+                                <div class="color-group">
+                                    <div class="cell-color"><div class="color-square green"></div></div>
+                                </div>
                             </div>
                             <div class="cell-name">Hank Pym</div>
                             <div class="cell-universe">Marvel Comics</div>
@@ -320,17 +374,21 @@
                         </div>
                     </div>
                     <div class="table-row" onclick="open013()"
-                    data-id="13" 
-                    data-color="4" 
-                    data-name="L" 
-                    data-universe="Death Note" 
-                    data-configs="?" 
-                    data-modules="1" 
-                    data-author="User 08">
+                        data-id="13" 
+                        data-color="4" 
+                        data-name="L" 
+                        data-universe="Death Note" 
+                        data-configs="?" 
+                        data-modules="1" 
+                        data-author="User 08">
                         <div class="col-5 row-left">
                             <div class="cell-id">
-                                <a>#013</a>
-                                <div class="cell-color"><div class="color-square purple"></div></div>
+                                <div class="id-group">
+                                    <a>#013</a>
+                                </div>
+                                <div class="color-group">
+                                    <div class="cell-color"><div class="color-square purple"></div></div>
+                                </div>
                             </div>
                             <div class="cell-name">L</div>
                             <div class="cell-universe">Death Note</div>
@@ -342,17 +400,21 @@
                         </div>
                     </div>
                     <div class="table-row" onclick="open014()"
-                    data-id="14" 
-                    data-color="3" 
-                    data-name="Perry The Platypus" 
-                    data-universe="Phineas and Ferb" 
-                    data-configs="1" 
-                    data-modules="3" 
-                    data-author="User 07">
+                        data-id="14" 
+                        data-color="3" 
+                        data-name="Perry The Platypus" 
+                        data-universe="Phineas and Ferb" 
+                        data-configs="1" 
+                        data-modules="3" 
+                        data-author="User 07">
                         <div class="col-5 row-left">
                             <div class="cell-id">
-                                <a>#014</a>
-                                <div class="cell-color"><div class="color-square green"></div></div>
+                                <div class="id-group">
+                                    <a>#014</a>
+                                </div>
+                                <div class="color-group">
+                                    <div class="cell-color"><div class="color-square green"></div></div>
+                                </div>
                             </div>
                             <div class="cell-name">Perry The Platypus</div>
                             <div class="cell-universe">Phineas and Ferb</div>
@@ -364,17 +426,21 @@
                         </div>
                     </div>
                     <div class="table-row" onclick="open015()"
-                    data-id="15" 
-                    data-color="3" 
-                    data-name="Marinette Dupain Cheng" 
-                    data-universe="Miraculous Ladybug" 
-                    data-configs="1" 
-                    data-modules="3" 
-                    data-author="User 07">
+                        data-id="15" 
+                        data-color="3" 
+                        data-name="Marinette Dupain Cheng" 
+                        data-universe="Miraculous Ladybug" 
+                        data-configs="1" 
+                        data-modules="3" 
+                        data-author="User 07">
                         <div class="col-5 row-left">
                             <div class="cell-id">
-                                <a>#015</a>
-                                <div class="cell-color"><div class="color-square green"></div></div>
+                                <div class="id-group">
+                                    <a>#015</a>
+                                </div>
+                                <div class="color-group">
+                                    <div class="cell-color"><div class="color-square green"></div></div>
+                                </div>
                             </div>
                             <div class="cell-name">Marinette Dupain Cheng</div>
                             <div class="cell-universe">Miraculous Ladybug</div>
@@ -502,7 +568,7 @@
         font-size: 1.0vw;
         line-height: 1.3;
         margin: 0;
-        width: 60%;
+        width: 52%;
     }
 
     #hero-stats-container {
@@ -721,28 +787,34 @@
         font-weight: 400;
     }
 
-    .table-header, .table-row {
+    .table-row {
         display: flex;
         width: 100%;
-        column-gap: 2vh; /* Stesso gap di navbar e hero */
+        column-gap: 2vh;
         align-items: center;
-        border-bottom: 1px solid #ddd;
-        padding: 0vh 0;
+        flex-shrink: 0;
         cursor: pointer;
+        background-color: white;
+        /* Transizione fluida per l'opacità */
+        transition: opacity 0.3s ease;
+        /* Usiamo il bordo superiore nero per tutte */
+        border-top: 1px solid black;
+        box-sizing: border-box; /* Importante per evitare lo shifting */
     }
 
     .table-header {
         color: black;
         font-size: 1.0vw;
-        border-bottom: 1px solid black; /* Linea più marcata per l'intestazione */
         display: flex;
         width: 100%;
         column-gap: 2vh;
         padding: 0vh 0;
-        flex-shrink: 0; /* Impedisce all'header di restringersi */
+        flex-shrink: 0;
+        border-bottom: 1px solid black;
+        z-index: 3;
     }
 
-     .table-header a{
+    .table-header a{
         opacity: 0.5;
         transition: opacity 0.3s;
     }
@@ -772,22 +844,29 @@
         width: 0px;
     }
 
-    .table-row {
-        display: flex;
-        width: 100%;
-        column-gap: 2vh;
-        align-items: center;
-        border-bottom: 1px solid #ddd;
-        flex-shrink: 0; /* Impedisce alle righe di schiacciarsi */
+    #table-body:hover .table-row {
+        opacity: 0.5;
     }
 
-    .table-header, .table-row {
-        display: flex;
-        width: 100%;
-        /* Il gap è gestito dal #container padre, qui usiamo lo stesso column-gap */
-        column-gap: 2vh; 
-        border-bottom: 1px solid #ddd;
-        align-items: center;
+    #table-body .table-row:hover {
+        opacity: 1;
+    }
+
+    #table-body:hover .table-row:not(:hover) {
+        opacity: 0.5;
+    }
+
+    #table-body .table-row:hover + .table-row {
+        opacity: 1 !important;
+    }
+
+    #table-body .table-row:first-child {
+        border-top: none;
+        /* oppure margin-top: 0; se avevi usato margini */
+    }
+
+    #table-body .table-row:hover + .table-row > div {
+        opacity: 0.5; /* Spegne il testo e gli elementi interni della riga sotto */
     }
 
     .table-header div[onclick] {
@@ -799,8 +878,16 @@
         color: black; /* Il verde che già usi nel sito */
     }
 
-    .table-header div[onclick]:hover a {
-        opacity: 1;
+    .table-header div[onclick]:hover a,
+    .id-group:hover a,
+    .color-group:hover .color-square {
+        opacity: 1 !important;
+        color: black !important;
+    }
+
+    /* Rendi il cursore pointer coerente per tutto il gruppo ID e Colore */
+    .id-group, .color-group {
+        cursor: pointer;
     }
 
     /* Gestione interna dei due blocchi */
@@ -811,11 +898,40 @@
         height: 5vh;
     }
 
+    .sort-arrow {
+        width: 0.8vw;
+        margin-left: 0.3vw;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    /* Contenitore per allineare testo e freccia */
+    .table-header div[onclick] {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Assicurati che le celle abbiano spazio per la freccia */
+    .header-left div, .header-right div {
+        display: flex;
+        align-items: center;
+    }
+
     /* Distribuzione larghezze interne al blocco 62.5% */
-    .cell-id { width: 15%; display: flex; justify-content: space-between; align-items: center;}
-    .cell-color, .cell-color-head { width: 5%; margin-right: 5vh;}
+    .cell-id { width: 20%; display: flex; align-items: center;}
     .cell-name { width: 40%; }
     .cell-universe { width: 40%; }
+
+    .id-group{
+        display: flex;
+        align-items: center;
+        width: 52%;
+    }
+
+    .color-group {
+        display: flex;
+        align-items: center;
+    }
 
     .cell-id.active-id a {
         opacity: 1 !important;
@@ -837,6 +953,7 @@
         overflow-y: auto;
         scrollbar-width: none;
     }
+
     #table-body::-webkit-scrollbar { display: none; }
 
     .color-square{
@@ -857,7 +974,7 @@
     .purple { background-color: #6027FF; }
     .orange { background-color: #FC5C18; }
     .yellow { background-color: #FFCC00; }
-    .grey { background-color: #D9D9D9;}
+    .grey { background-color: black; opacity: 0.3; transition: opacity 0.3s; }
     .black { background-color: black !important; }
 
 
@@ -1021,6 +1138,8 @@
 
 <script>
 
+    body.scrollTo({ top: 0, behavior: 'smooth' });
+
     function toggleContent(section) {
         // 1. Nascondi tutti i testi
         const contents = document.querySelectorAll('.tab-content');
@@ -1145,34 +1264,21 @@
         const body = document.getElementById('table-body');
         const rows = Array.from(body.querySelectorAll('.table-row'));
         
-        // 1. RESET TOTALE
-        // Rimuove tutte le classi di stato attivo da ogni intestazione
+        // 1. RESET TOTALE (Classi e Frecce precedenti)
         document.querySelectorAll('.table-header [class^="cell-"]').forEach(el => {
             el.classList.remove('active-sort', 'active-id', 'active-color');
+            const existingArrow = el.querySelector('.sort-arrow');
+            if (existingArrow) existingArrow.remove();
         });
         
-        // Ripristina il quadratino dell'header a grigio
+        // Reset del quadratino (rimuove il nero)
         const headerSquare = document.querySelector('.table-header .color-square');
         if (headerSquare) {
-            headerSquare.style.backgroundColor = ''; // Torna al grigio del CSS
+            headerSquare.classList.remove('black'); // Usa la classe black che hai nel CSS
+            headerSquare.classList.add('grey');
         }
 
-        // 2. LOGICA VISIVA SPECIFICA
-        if (column === 'id') {
-            const cellId = document.querySelector('.cell-id');
-            cellId.classList.add('active-id'); // Accende solo il testo "ID"
-        } 
-        else if (column === 'color') {
-            const cellId = document.querySelector('.cell-id');
-            cellId.classList.add('active-color'); // Il CSS renderà nero il quadrato
-        } 
-        else {
-            // Per tutte le altre colonne (Name, Universe, ecc.)
-            const targetHeader = document.querySelector(`.cell-${column}`);
-            if (targetHeader) targetHeader.classList.add('active-sort');
-        }
-
-        // 3. LOGICA DI ORDINAMENTO (Invariata)
+        // 2. LOGICA DI INVERSIONE ORDINE
         if (currentSort.column === column) {
             currentSort.ascending = !currentSort.ascending;
         } else {
@@ -1180,6 +1286,41 @@
             currentSort.ascending = true;
         }
 
+        // 3. CREAZIONE FRECCIA UNICA
+        const arrowImg = document.createElement('img');
+        arrowImg.className = 'sort-arrow';
+        arrowImg.src = currentSort.ascending ? './images/arrow_down.png' : './images/arrow_up.png';
+
+        // 4. APPLICAZIONE VISIVA
+        if (column === 'id') {
+            const activeHeader = document.querySelector('.cell-id');
+            activeHeader.classList.add('active-id');
+            const textElement = activeHeader.querySelector('a');
+            textElement.after(arrowImg); // Freccia a destra di "ID"
+        } 
+        else if (column === 'color') {
+            const activeHeader = document.querySelector('.cell-id');
+            activeHeader.classList.add('active-color');
+            // Cambio colore quadratino
+            const sq = activeHeader.querySelector('.color-square');
+            if (sq) {
+                sq.classList.remove('grey');
+                sq.classList.add('black');
+            }
+            // Freccia a destra del gruppo colore
+            const colorGroup = activeHeader.querySelector('.color-group');
+            colorGroup.appendChild(arrowImg);
+        } 
+        else {
+            const activeHeader = document.querySelector(`.cell-${column}`);
+            if (activeHeader) {
+                activeHeader.classList.add('active-sort');
+                const textLink = activeHeader.querySelector('a');
+                textLink.after(arrowImg);
+            }
+        }
+
+        // 5. LOGICA DI ORDINAMENTO (Tie-breaker ID)
         rows.sort((a, b) => {
             let valA = a.getAttribute(`data-${column}`);
             let valB = b.getAttribute(`data-${column}`);
@@ -1199,13 +1340,10 @@
             return idA - idB; 
         });
 
+        // 6. UPDATE DOM E SCROLL
         body.innerHTML = "";
         rows.forEach(row => body.appendChild(row));
-
-        body.scrollTo({
-            top: 0,
-            behavior: 'smooth' // Rende il ritorno in cima fluido
-        });
+        body.scrollTo({ top: 0, behavior: 'smooth' });
     }
 </script>
 </html>
