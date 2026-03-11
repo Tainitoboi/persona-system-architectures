@@ -23,7 +23,7 @@
             <div class="col-5" id="content">
                 <div class="column-navbar">
                     <div class="nav-content">
-                        <a href="">Gallery</a>
+                        <a class="active" style="cursor:default">Gallery</a>
                     </div>
                 </div>
                 <div class="column-scroll-content">
@@ -40,9 +40,9 @@
                         <div class="nav-content">
                             <a href="javascript:void(0)" id="btn-info" class="tab-link active" onclick="toggleContent('info')">Info</a>
                             <span id="sep-1" class="separator"> / </span>
-                            <a href="javascript:void(0)" id="btn-class" class="tab-link" onclick="toggleContent('class')">Classification</a>
+                            <a href="javascript:void(0)" id="btn-class" class="tab-link nav-inactive" onclick="toggleContent('class')">Classification</a>
                             <span id="sep-2" class="separator"> / </span>
-                            <a href="javascript:void(0)" id="btn-credits" class="tab-link" onclick="toggleContent('credits')">Credits</a>
+                            <a href="javascript:void(0)" id="btn-credits" class="tab-link nav-inactive" onclick="toggleContent('credits')">Credits</a>
                         </div>
                     </div>
                     <div class="scrollable-text-content">
@@ -191,10 +191,6 @@
         font-size: 1vw;
     }
 
-    .column-navbar .nav-content a {
-        margin-left: 0;
-    }
-
     .col-12 {
         width: 100%;
     }
@@ -292,6 +288,7 @@
     .column-navbar .nav-content a {
         cursor: pointer;
         transition: opacity 0.3s;
+        margin-left: 0;
     }
 
     .column-navbar .nav-content a:hover {
@@ -300,25 +297,61 @@
 
     /* Classe per gestire i contenuti tab */
 
+    .active {
+        opacity: 1 !important;
+        cursor: default;
+    }
+
+    .tab-link:not(.active):hover, 
+    .nav-inactive:hover {
+        opacity: 1 !important;
+        transition: 0.3s;
+    }
+
+    /* Se "Gallery" non ha la classe tab-link, aggiungi questa per sicurezza */
+    a.active:hover {
+        opacity: 1 !important;
+    }
+
     .tab-content {
         width: 100%;
         animation: fadeIn 0.4s ease; /* Piccolo effetto di entrata */
     }
 
     .tab-link {
-        opacity: 0.5; /* Spento di default */
+        opacity: 0.5;
         transition: opacity 0.3s ease;
+        cursor: pointer; /* Cursore standard per i link cliccabili */
+        text-decoration: none;
+        color: black;
+        display: inline-block;
+    }
+
+    .tab-link.active {
+        opacity: 1 !important;
+        cursor: default !important; /* Disabilita la manina se già attivo */
+    }
+
+    .tab-link:not(.active):hover {
+        opacity: 1 !important;
+        transition: 0.3s;
+    }
+
+    .tab-link.active, 
+    .active {
+        opacity: 1 !important;
+        cursor: default !important;
+    }
+
+    /* Assicurati che il pointer sia attivo solo se NON è active */
+    .tab-link:not(.active) {
         cursor: pointer;
     }
 
-    /* Stato acceso */
-    .tab-link.active {
-        opacity: 1;
-    }
-
     /* Hover per feedback utente */
-    .tab-link:hover {
-        opacity: 0.8;
+    .tab-link.nav-inactive:hover {
+        opacity: 1;
+        transition: 0.3s;
     }
 
     .tab-link, .separator {
@@ -339,6 +372,26 @@
     .tab-link.active, .separator.active {
         opacity: 1 !important; /* !important assicura che vinca su altre regole */
     }
+
+    .tab-link:hover {
+        opacity: 1 !important;
+        transition: 0.3s;
+    }
+
+    /* 2. Accende il separatore SUCCESSIVO quando passi sul link (es. Info accende /) */
+    .tab-link:hover + .separator {
+        opacity: 1 !important;
+        transition: 0.3s;
+    }
+
+    /* 3. Accende il separatore PRECEDENTE (es. Classification accende il / prima) */
+    /* Nota: Poiché il CSS non può tornare indietro, usiamo il selettore :has() moderno */
+    .nav-content:has(#btn-class:hover) #sep-1,
+    .nav-content:has(#btn-credits:hover) #sep-2 {
+        opacity: 1 !important;
+        transition: 0.3s;
+    }
+
 
     @keyframes fadeIn {
         from { opacity: 0; }
