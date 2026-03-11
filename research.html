@@ -24,7 +24,7 @@
                 <div class="section-scrollable">
                     <div class="column-navbar">
                         <div class="nav-content">
-                            <a style="cursor: default;">Research</a>
+                            <a class="active" style="cursor: default;">Research</a>
                         </div>
                     </div>
                     <div class="scrollable-text-content">
@@ -192,6 +192,17 @@
         box-sizing: border-box;
         flex-shrink: 0;
         margin-bottom: 0;
+    }
+
+    .column-navbar .nav-content a.active {
+        opacity: 1 !important;
+        cursor: default;
+        transition: none !important;
+    }
+
+    /* Assicurati che la regola hover esistente ignori chi ha la classe active */
+    .column-navbar .nav-content a:not(.active):hover {
+        opacity: 0.5;
     }
 
     .nav-inactive{
