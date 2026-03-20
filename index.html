@@ -26,7 +26,7 @@
 
             <div id="hero-stats-container">
                 <div id="hero-stats">
-                    <p>Architectures: 25<br>
+                    <p>Architectures: 15<br>
                     Origin universes: 5<br>
                     Configurations: 24<br>
                     Modules: 54</p>
@@ -811,7 +811,6 @@
 
     .table-header {
         color: black;
-        font-size: 1.0vw;
         display: flex;
         width: 100%;
         column-gap: 2vh;
@@ -989,15 +988,102 @@
         background-color: white;
     }
 
-    @media (max-width: 600px){
+    @media (max-width: 800px){
         body{
             overflow-x: hidden;
         }
 
-        #nave{
+        #main-navbar{
+            height: 6vh;
+        }
+
+        .nav-content a{
+            font-size: 3.6vw;
+        }
+
+        .nav-content #nav-right-links{
+            display: none;
+        }
+
+        #nav-left-links{
+            width: 80%;
+        }
+
+        #container-main{
+            padding-left: 3vh;
+            padding-right: 3vh;
+        }
+
+        #hero-stats p{
+            font-size: 3.6vw;
+            line-height: 1.4;
+        }
+
+        #hero-credits{
+            display: none;
+        }
+
+        #hero-stats-container{
+            flex-direction: column;
+        }
+
+        #hero-description{
+            display: none;
+        }
+
+        #hero-stats-container{
+            width: 100%;
+        }
+
+        .table-header .header-right{
+            display: none;
+        }
+
+        .table-header .header-left{
+            width: 100%;
+        }
+
+        .header-left .color-group{
+            display: none;
+        }
+
+        .table-header div.cell-universe[onclick] {
+            display: none;
+        }
+
+        .sort-arrow {
+            width: 3.2vw;
+            margin-left: 1.5vw;
+        }
+
+        .header-left, .row-left, .header-right, .row-right{
+            height: 6vh;
+        }
+
+        #archive-table{
+            font-size: 3.6vw;
+        }
+
+        #archive-table .row-left{
+            width: 100%;
+        }
+
+        .color-group{
+            display: none;
+        }
+
+        .cell-name {
+            width: 80%;
+        }
+
+        .cell-universe{
             display: none;
         }
         
+        #archive-table .row-right{
+            display: none;
+        }
+
         #info{
             display: none;
         }
@@ -1006,36 +1092,10 @@
             width: 100%;
         }
 
-        #stoptheloop {
-            margin-top: 1.4rem;
-            width: 18vw;
-            margin-right: 1.2rem;
-        }
-
-        #welcome{
-            padding: 5vw;
-        }
-
-        #ritmotype-res {
-            margin-top: 20vw;
-            margin-bottom: 0;
-            font-size: 12vw;
-        }
-
-        .ritmotype-title {
-            font-size: 12vw;
-            margin-top: 7vw;
-            margin-bottom: 0;
-        }
-
         #content{
             padding: 5vw;
             row-gap: 10vw;
             overflow-y: auto;
-        }
-
-        #content .title-container{
-            font-size: 6vw;
         }
 
         #content p{
@@ -1048,14 +1108,6 @@
 
         #content .dual-p-mix {
             flex-direction: column;
-        }
-
-        .dual-p-mix{
-            gap: 4vw;
-        }
-
-        .dual-p-mix div {
-            width: 100%;
         }
 
         #dual-left {
@@ -1073,67 +1125,18 @@
             padding-left: 4vw;
         }
 
-        #stoplist {
-            border-radius: 3vw;
-            padding: 4vw;
-        }
-
-        #stoplist-img {
-            align-items: center;
-        }
-
         .btn{
             height: 14vw;
             border-radius: 10vw;
             font-size: 4.8vw;
         }
 
-        .spoty{
-            width:60vw;
-        }
-
-        .spotify-cont {
-            display: flex;
-            flex-direction: column;
-            gap: 6vw;
-            margin-bottom: 2vw;
-        }
-
-        #stoplist-img img{
-            width: 100%;
-        }
-
-        .download-title{
-            font-size: 6vw;
-        }
-
-        .btn-container{
-            flex-direction: column;
-            gap: 6vw;
-        }
-
         .btn-down{
-            width: 60vw;
-        }
-
-        .download-container{
-            gap: 4vw;
-        }
-
-        .btn-expl{
             width: 60vw;
         }
 
         .spacer{
             height: 2vh;
-        }
-
-        #footer h3 {
-            font-size: 4.2vw;
-        }
-
-        #footer{
-            padding: 5vw;
         }
     }
 </style>
