@@ -1091,17 +1091,28 @@
             position: fixed;
             top: 0;
             left: 0;
-            height: 100vh;
-            width: 100vw;
+            /* Usa 100% invece di 100vh per una maggiore compatibilità con le barre browser */
+            height: 100%; 
+            width: 100%;
+            
+            /* Forza l'altezza minima per coprire tutto lo spazio visibile moderno */
+            min-height: -webkit-fill-available; 
+            
             background-color: white;
-            transform: translateX(100%);
-            transition: transform 0.5s ease-in-out;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 8vh;
-            list-style: none;
+            gap: 5vh;
+            margin: 0;
+            padding: 0;
+            
+            /* Assicurati che non ci siano bordi o ombre che creano distacchi */
+            border: none;
+            outline: none;
+
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in-out;
             z-index: 9999;
         }
 
