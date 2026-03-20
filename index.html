@@ -12,6 +12,7 @@
     <div class="col-12" id="container-main">
         <nav class="nav-content" id="main-navbar">
             <div class="col-5" id="nav-left-links">
+                <img id="loghino" src="./images/icon.png">
                 <a id="nav-el-1" style="cursor:default">PERSONA SYSTEM ARCHITECTURES</a>
             </div>
             <div class="col-3" id="nav-right-links">
@@ -1008,6 +1009,10 @@
         justify-content: space-between;
     }
 
+    #loghino{
+        display: none;
+    }
+
     @media (max-width: 1000px){
         body{
             overflow-x: hidden;
@@ -1027,6 +1032,11 @@
 
         #nav-left-links{
             width: 80%;
+            flex-direction: row;
+        }
+
+        #nav-left-links a{
+            display: none;
         }
 
         .desktop-links { display: none; }
@@ -1116,15 +1126,6 @@
             z-index: 9999;
         }
 
-        :root {
-            /* Definisce l'altezza reale visibile */
-            --vh: 1vh;
-        }
-
-        .paroline {
-            height: calc(var(--vh, 1vh) * 100);
-        }
-
         #menu-toggle:checked ~ .paroline {
             transform: translateX(0);
         }
@@ -1133,6 +1134,12 @@
             font-size: 6vw !important;
             font-family: 'Sora', sans-serif;
             cursor: pointer;
+        }
+
+        #loghino{
+            display: block;
+            height: 4.5vh;
+            width: 4.5vh;
         }
 
         #container-main{
@@ -1417,15 +1424,6 @@
         body.innerHTML = "";
         rows.forEach(row => body.appendChild(row));
         body.scrollTo({ top: 0, behavior: 'smooth' });
-
-        function setDocHeight() {
-            let vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-        }
-
-        window.addEventListener('resize', setDocHeight);
-        window.addEventListener('orientationchange', setDocHeight);
-        setDocHeight();
     }
 </script>
 </html>
