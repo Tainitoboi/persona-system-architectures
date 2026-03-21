@@ -40,7 +40,7 @@
 
             <div id="hero-stats-container">
                 <div id="hero-stats">
-                    <p>Architectures: 15<br>
+                    <p>Architectures: 16<br>
                     Origin universes: 5<br>
                     Configurations: 24<br>
                     Modules: 54</p>
@@ -1035,10 +1035,16 @@
         #nav-left-links{
             width: 80%;
             flex-direction: row;
+            align-items: center;
         }
 
-        #nav-left-links a{
-            display: none;
+        #nav-left-links #nav-el-1 {
+            display: none; /* Nasconde il nome lungo */
+        }
+
+        #nav-left-links #nav-el-1b {
+            display: inline-block;
+            padding-left: 2vh;
         }
 
         .desktop-links { display: none; }
