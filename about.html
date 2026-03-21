@@ -12,12 +12,26 @@
     <div class="col-12" id="container-main">
         <nav class="nav-content" id="main-navbar">
             <div class="col-5" id="nav-left-links">
-                <a class="nav-inactive" id="nav-el-1" onclick="openHome()" style="cursor:pointer">PERSONA SYSTEM ARCHITECTURES</a>
+                <img id="loghino" src="./images/icon.png" onclick="openHome()" href="./index.html">
+                <a class="nav-inactive" id="nav-el-1" onclick="openHome()" href="./index.html">PERSONA SYSTEM ARCHITECTURES</a>
+                <a id="nav-el-1b" style="cursor:default" onclick="openHome()" href="./index.html">P. S. A.</a>
             </div>
             <div class="col-3" id="nav-right-links">
                 <a id="nav-el-2">ABOUT</a>
                 <a class="nav-inactive" id="nav-el-3" onclick="openResearch()" href="#research-section">RESEARCH</a>
             </div>
+            <nav class="burger-menu">
+                <div class="nav-container">
+                    <input class="checkbox" type="checkbox" id="menu-toggle" />
+                    <div class="menu-button-container" onclick="toggleMenu()">
+                        <div class="menu-button"></div>
+                    </div>
+                    <div class="paroline">
+                        <li><a onclick="openHome()">Home</a></li>
+                        <li><a onclick="openResearch()">Research</a></li>
+                    </div>
+                </div>
+            </nav>
         </nav>
         <div class="col-12" id="container">
             <div class="col-5" id="content">
@@ -72,6 +86,50 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-12" id="mobile-content">
+                <div class="section-scrollable">
+                    <div class="column-navbar">
+                        <div class="nav-content">
+                            <a id="btn-info-mob" class="tab-link active" onclick="toggleContentMobile('info')">Info</a>
+                            <span id="sep-1-mob" class="separator active"> / </span>
+                            <a id="btn-class-mob" class="tab-link" onclick="toggleContentMobile('class')">Classification</a>
+                            <span id="sep-2-mob" class="separator"> / </span>
+                            <a id="btn-credits-mob" class="tab-link" onclick="toggleContentMobile('credits')">Credits</a>
+                        </div>
+                    </div>
+                    <div class="scrollable-text-content">
+                        <div class="single-p-mix">
+                            <div id="text-info-mobile" class="tab-content" style="display:block;">
+                                <p>Persona System Architectures is a digital archive designed to map and analyze identity structures through the methodological lens of the Persona System Design framework.
+                                The platform operates as both a research device and an exploratory interface, aimed at making visible the systemic and modular nature of personal identity configurations.</p>
+                                <p>The archive gathers case studies drawn from heterogeneous contexts, including public figures, fictional characters, artistic personas and mediated identities selected for their 
+                                capacity to exemplify complex identity constructions. Rather than offering biographical descriptions, the website focuses on structural analysis, examining how identities are articulated, 
+                                projected, and organized across different dimensions.</p>
+                                <p>Each entry is presented as an identity architecture. The goal of the platform is not to prescribe how identities should be constructed, but to provide a conceptual and analytical tool
+                                    through which identity systems can be observed, compared, and critically interpreted. By translating theoretical research into a navigable digital environment, the archive bridges 
+                                    conceptual reflection and design practice.</p>
+                                <p>Conceived as an expandable system, the website supports comparative exploration and pattern recognition across cases. As identity configurations continuously evolve 
+                                within contemporary media environments, the archive remains open to future implementation and theoretical refinement.</p>
+                            </div>
+                            
+                            <div id="text-class-mobile" class="tab-content" style="display:none;">
+                                <p>Il sistema di classificazione si basa su parametri modulari definiti nel capitolo VI, 
+                                assegnando livelli di completezza tramite codici colore (Verde, Blu, Rosa, Viola).</p>
+                            </div>
+
+                            <div id="text-credits-mobile" class="tab-content" style="display:none;">
+                                <p>Progetto di Tesi di: [Tuo Nome]<br>Relatore: [Nome Relatore]<br>Font utilizzati: Sora, Open Sans.</p>
+                            </div>
+                            <div class="spacer"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+                <div class="spacer"></div>
+                <div class="spacer"></div>
+                <div class="spacer"></div>
+                <div class="spacer"></div>
             </div>
         </div>
     </div>
@@ -159,7 +217,7 @@
         height: 5vh;
         background-color: white;
         border-bottom: 1px solid black;
-        z-index: 1000;
+        z-index: 100;
         display: flex;
         align-items: center;
         box-sizing: border-box;
@@ -406,15 +464,344 @@
         background-color: white;
     }
 
-    @media (max-width: 600px){
+    .burger-menu { display: none; } /* Nascosto su desktop */
+
+    .desktop-links {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #nav-left-links #nav-el-1b {
+        display: none;
+    }
+
+    #loghino{
+        display: none;
+    }
+
+    #mobile-content{
+        display: none;
+    }
+
+    .fixed-text-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 2vh;
+    }
+
+    @media (max-width: 1000px){
+        html, body {
+            overflow-y: auto !important;
+            height: auto !important;
+        }
+        
         body{
             overflow-x: hidden;
+            position: fixed;
         }
 
-        #nave{
+        #container{
+            overflow-x: hidden;
+            overflow-y: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .column-navbar{
+            position: relative;
+        }
+
+        #main-navbar{
+            height: 8vh;
+        }
+
+        .nav-content a{
+            font-size: 4.2vw;
+        }
+
+        .nav-content #nav-right-links{
+            display: none;
+        }
+
+        #nav-left-links{
+            width: 80%;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        #nav-left-links #nav-el-1 {
+            display: none; /* Nasconde il nome lungo */
+        }
+
+        #nav-left-links #nav-el-1b {
+            display: inline-block;
+            padding-left: 2vh;
+        }
+
+        .nav-content span {
+            margin: 0 1vw;
+            font-size: 4.2vw;
+        }
+
+        #arrow{
+            display: none;
+        }
+
+        .desktop-links { display: none; }
+        
+        .burger-menu { display: flex; }
+
+        .nav-container {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .checkbox {
+            position: absolute;
+            display: block;
+            width: 30px;
+            height: 30px;
+            right: 0;
+            z-index: 10001;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .menu-button-container {
+            height: 3vh;
+            width: 3vh;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+        }
+
+        .menu-button, .menu-button::before, .menu-button::after {
+            display: block;
+            background-color: black;
+            position: absolute;
+            height: 2px;
+            width: 25px;
+            transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+            border-radius: 2px;
+        }
+
+        .menu-button::before { content: ''; margin-top: -8px; }
+        .menu-button::after { content: ''; margin-top: 8px; }
+
+        #menu-toggle:checked + .menu-button-container .menu-button::before {
+            margin-top: 0px;
+            transform: rotate(405deg);
+        }
+
+        #menu-toggle:checked + .menu-button-container .menu-button {
+            background: rgba(255, 255, 255, 0);
+        }
+
+        #menu-toggle:checked + .menu-button-container .menu-button::after {
+            margin-top: 0px;
+            transform: rotate(-405deg);
+        }
+
+        .paroline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            /* Usa 100% invece di 100vh per una maggiore compatibilità con le barre browser */
+            height: 100%; 
+            width: 100%;
+            
+            /* Forza l'altezza minima per coprire tutto lo spazio visibile moderno */
+            min-height: -webkit-fill-available; 
+            
+            list-style-type: none;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5vh;
+            margin: 0;
+            padding: 0;
+            
+            /* Assicurati che non ci siano bordi o ombre che creano distacchi */
+            border: none;
+            outline: none;
+
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in-out;
+            z-index: 9999;
+        }
+
+        #menu-toggle:checked ~ .paroline {
+            transform: translateX(0);
+        }
+
+        .paroline li a {
+            font-size: 6vw !important;
+            font-family: 'Sora', sans-serif;
+            cursor: pointer;
+        }
+
+        #loghino{
+            display: block;
+            height: 4.5vh;
+            width: 4.5vh;
+        }
+
+        #content{
+            display: none;
+        }
+
+        #right-column-container{
+            display: none;
+        }
+
+        #mobile-content{
+            display: flex;
+            flex-direction: column;
+            height: auto !important; 
+            overflow: visible !important;
+            margin-top: 2vh;
+
+            font-family: 'Sora', sans-serif;
+            font-weight: 400;
+            font-size: 4.2vw;
+            line-height: 1.4;
+            padding-bottom: 10vh; 
+        }
+
+        #mobile-content p{
+            margin: 0;
+        }
+
+        #mobile-content {
+            display: block; /* Da flex a block per far fluire gli elementi uno sotto l'altro */
+            height: auto !important; 
+            overflow: visible !important;
+        }
+
+        #text-info, #text-class, #text-credits {
+            width: 100% !important;
+            /* Non mettere display: none qui, o sovrascriverai JavaScript */
+        }
+
+        /* 2. Assicurati che le sezioni interne non siano bloccate */
+        #mobile-description, 
+        #mobile-gallery, 
+        #mobile-architecture {
+            height: auto !important;
+            overflow: visible !important;
+            display: block;
+            width: 100%;
+        }
+
+        /* 3. Le immagini devono adattarsi alla larghezza senza forzare scroll orizzontali */
+        #mobile-gallery img, 
+        #mobile-architecture img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .scrollable-text-content .single-p-mix{
+            padding-top: 2vh;
+        }
+
+        .scrollable-text-content p{
+            font-size: 4.2vw;
+            line-height: 1.4;
+            text-indent: 0;
+        }
+
+        .scrollable-text-content p + p {
+            text-indent: 10vw;
+        }
+
+        #container-main{
+            padding-left: 3vh;
+            padding-right: 3vh;
+        }
+
+        #hero-stats p{
+            font-size: 4.2vw;
+            line-height: 1.4;
+        }
+
+        #hero-credits{
+            display: none;
+        }
+
+        #hero-stats-container{
+            flex-direction: column;
+        }
+
+        #hero-description{
+            display: none;
+        }
+
+        #hero-stats-container{
+            width: 100%;
+        }
+
+        .table-header .header-right{
+            display: none;
+        }
+
+        .table-header .header-left{
+            width: 100%;
+        }
+
+        .header-left .color-group{
+            display: none;
+        }
+
+        .table-header div.cell-universe[onclick] {
+            display: none;
+        }
+
+        .sort-arrow {
+            width: 3.2vw;
+            margin-left: 1.5vw;
+        }
+
+        .header-left, .row-left, .header-right, .row-right{
+            height: 8vh;
+        }
+
+        #table-body {
+            padding-bottom: 10vh; 
+        }
+
+        #archive-table{
+            font-size: 4.2vw;
+        }
+
+        #archive-table .row-left{
+            width: 100%;
+        }
+
+        .color-group{
+            display: none;
+        }
+
+        .cell-name {
+            width: 80%;
+        }
+
+        .cell-universe{
             display: none;
         }
         
+        #archive-table .row-right{
+            display: none;
+        }
+
         #info{
             display: none;
         }
@@ -423,36 +810,10 @@
             width: 100%;
         }
 
-        #stoptheloop {
-            margin-top: 1.4rem;
-            width: 18vw;
-            margin-right: 1.2rem;
-        }
-
-        #welcome{
-            padding: 5vw;
-        }
-
-        #ritmotype-res {
-            margin-top: 20vw;
-            margin-bottom: 0;
-            font-size: 12vw;
-        }
-
-        .ritmotype-title {
-            font-size: 12vw;
-            margin-top: 7vw;
-            margin-bottom: 0;
-        }
-
         #content{
             padding: 5vw;
             row-gap: 10vw;
             overflow-y: auto;
-        }
-
-        #content .title-container{
-            font-size: 6vw;
         }
 
         #content p{
@@ -465,14 +826,6 @@
 
         #content .dual-p-mix {
             flex-direction: column;
-        }
-
-        .dual-p-mix{
-            gap: 4vw;
-        }
-
-        .dual-p-mix div {
-            width: 100%;
         }
 
         #dual-left {
@@ -490,67 +843,18 @@
             padding-left: 4vw;
         }
 
-        #stoplist {
-            border-radius: 3vw;
-            padding: 4vw;
-        }
-
-        #stoplist-img {
-            align-items: center;
-        }
-
         .btn{
             height: 14vw;
             border-radius: 10vw;
             font-size: 4.8vw;
         }
 
-        .spoty{
-            width:60vw;
-        }
-
-        .spotify-cont {
-            display: flex;
-            flex-direction: column;
-            gap: 6vw;
-            margin-bottom: 2vw;
-        }
-
-        #stoplist-img img{
-            width: 100%;
-        }
-
-        .download-title{
-            font-size: 6vw;
-        }
-
-        .btn-container{
-            flex-direction: column;
-            gap: 6vw;
-        }
-
         .btn-down{
-            width: 60vw;
-        }
-
-        .download-container{
-            gap: 4vw;
-        }
-
-        .btn-expl{
             width: 60vw;
         }
 
         .spacer{
             height: 2vh;
-        }
-
-        #footer h3 {
-            font-size: 4.2vw;
-        }
-
-        #footer{
-            padding: 5vw;
         }
     }
 </style>
@@ -582,6 +886,43 @@
             document.getElementById('text-credits').style.display = 'block';
             document.getElementById('btn-credits').classList.add('active');
             document.getElementById('sep-2').classList.add('active'); // Accende solo lo slash prima di Credits
+        }
+    }
+
+    function toggleContentMobile(section) {
+        // 1. Definiamo gli ID dei testi mobile
+        const textIds = ['text-info-mobile', 'text-class-mobile', 'text-credits-mobile'];
+        
+        // 2. Nascondiamo tutti i testi mobile
+        textIds.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.style.setProperty('display', 'none', 'important');
+        });
+
+        // 3. Resettiamo bottoni e separatori del menu mobile
+        // Usiamo selettori specifici per non toccare il desktop
+        const mobileNav = document.querySelector('#mobile-content .nav-content');
+        mobileNav.querySelectorAll('.tab-link').forEach(btn => btn.classList.remove('active'));
+        mobileNav.querySelectorAll('.separator').forEach(sep => sep.classList.remove('active'));
+
+        // 4. Attiviamo la sezione scelta
+        const targetText = document.getElementById('text-' + section + '-mobile');
+        const targetBtn = document.getElementById('btn-' + section + '-mob');
+        
+        if (targetText) targetText.style.setProperty('display', 'block', 'important');
+        if (targetBtn) targetBtn.classList.add('active');
+
+        // 5. Logica dei separatori mobile
+        const s1 = document.getElementById('sep-1-mob');
+        const s2 = document.getElementById('sep-2-mob');
+
+        if (section === 'info') {
+            if (s1) s1.classList.add('active');
+        } else if (section === 'class') {
+            if (s1) s1.classList.add('active');
+            if (s2) s2.classList.add('active');
+        } else if (section === 'credits') {
+            if (s2) s2.classList.add('active');
         }
     }
 
