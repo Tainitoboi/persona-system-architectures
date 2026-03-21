@@ -88,53 +88,45 @@
                 </div>
             </div>
             <div class="col-12" id="mobile-content">
-                <div class="section-scrollable">
-                    <div class="column-navbar">
-                        <div class="nav-content">
-                            <a id="btn-info-mob" class="tab-link active" onclick="toggleContentMobile('info')">Info</a>
-                            <span id="sep-1-mob" class="separator active"> / </span>
-                            <a id="btn-class-mob" class="tab-link" onclick="toggleContentMobile('class')">Classification</a>
-                            <span id="sep-2-mob" class="separator"> / </span>
-                            <a id="btn-credits-mob" class="tab-link" onclick="toggleContentMobile('credits')">Credits</a>
-                        </div>
-                    </div>
-                    <div class="scrollable-text-content">
-                        <div class="single-p-mix">
-                            <div id="text-info-mobile" class="tab-content" style="display:block;">
-                                <div id="img-info" class="img-tab-content">
-                                    <img src="./images/about/mockup_1.png">
-                                    <img src="./images/about/mockup_2.png">
-                                </div>
-                                <div class="spacer"></div>
-                                <p>Persona System Architectures is a digital archive designed to map and analyze identity structures through the methodological lens of the Persona System Design framework.
-                                The platform operates as both a research device and an exploratory interface, aimed at making visible the systemic and modular nature of personal identity configurations.</p>
-                                <p>The archive gathers case studies drawn from heterogeneous contexts, including public figures, fictional characters, artistic personas and mediated identities selected for their 
-                                capacity to exemplify complex identity constructions. Rather than offering biographical descriptions, the website focuses on structural analysis, examining how identities are articulated, 
-                                projected, and organized across different dimensions.</p>
-                                <p>Each entry is presented as an identity architecture. The goal of the platform is not to prescribe how identities should be constructed, but to provide a conceptual and analytical tool
-                                    through which identity systems can be observed, compared, and critically interpreted. By translating theoretical research into a navigable digital environment, the archive bridges 
-                                    conceptual reflection and design practice.</p>
-                                <p>Conceived as an expandable system, the website supports comparative exploration and pattern recognition across cases. As identity configurations continuously evolve 
-                                within contemporary media environments, the archive remains open to future implementation and theoretical refinement.</p>
-                            </div>
-                            
-                            <div id="text-class-mobile" class="tab-content" style="display:none;">
-                                <p>Il sistema di classificazione si basa su parametri modulari definiti nel capitolo VI, 
-                                assegnando livelli di completezza tramite codici colore (Verde, Blu, Rosa, Viola).</p>
-                            </div>
-
-                            <div id="text-credits-mobile" class="tab-content" style="display:none;">
-                                <p>Progetto di Tesi di: [Tuo Nome]<br>Relatore: [Nome Relatore]<br>Font utilizzati: Sora, Open Sans.</p>
-                            </div>
-                            <div class="spacer"></div>
-                        </div>
+                <div class="column-navbar">
+                    <div class="nav-content">
+                        <a id="btn-info-mob" class="tab-link active" onclick="toggleContentMobile('info')">Info</a>
+                        <span id="sep-1-mob" class="separator active"> / </span>
+                        <a id="btn-class-mob" class="tab-link" onclick="toggleContentMobile('class')">Classification</a>
+                        <span id="sep-2-mob" class="separator"> / </span>
+                        <a id="btn-credits-mob" class="tab-link" onclick="toggleContentMobile('credits')">Credits</a>
                     </div>
                 </div>
-                <div class="spacer"></div>
-                <div class="spacer"></div>
-                <div class="spacer"></div>
-                <div class="spacer"></div>
-                <div class="spacer"></div>
+                <div class="scrollable-text-content">
+                    <div class="single-p-mix">
+                        <div id="text-info-mobile" class="tab-content" style="display:block;">
+                            <div id="img-info" class="img-tab-content">
+                                <img src="./images/about/mockup_1.png">
+                                <img src="./images/about/mockup_2.png">
+                            </div>
+                            <div class="spacer"></div>
+                            <p>Persona System Architectures is a digital archive designed to map and analyze identity structures through the methodological lens of the Persona System Design framework.
+                            The platform operates as both a research device and an exploratory interface, aimed at making visible the systemic and modular nature of personal identity configurations.</p>
+                            <p>The archive gathers case studies drawn from heterogeneous contexts, including public figures, fictional characters, artistic personas and mediated identities selected for their 
+                            capacity to exemplify complex identity constructions. Rather than offering biographical descriptions, the website focuses on structural analysis, examining how identities are articulated, 
+                            projected, and organized across different dimensions.</p>
+                            <p>Each entry is presented as an identity architecture. The goal of the platform is not to prescribe how identities should be constructed, but to provide a conceptual and analytical tool
+                                through which identity systems can be observed, compared, and critically interpreted. By translating theoretical research into a navigable digital environment, the archive bridges 
+                                conceptual reflection and design practice.</p>
+                            <p>Conceived as an expandable system, the website supports comparative exploration and pattern recognition across cases. As identity configurations continuously evolve 
+                            within contemporary media environments, the archive remains open to future implementation and theoretical refinement.</p>
+                        </div>
+                        
+                        <div id="text-class-mobile" class="tab-content" style="display:none;">
+                            <p>Progetto brrr di Tesi di: [Tuo Nome]<br>Relatore: [Nome Relatore]<br>Font utilizzati: Sora, Open Sans.</p>
+                        </div>
+
+                        <div id="text-credits-mobile" class="tab-content" style="display:none;">
+                            <p>Progetto di Tesi di: [Tuo Nome]<br>Relatore: [Nome Relatore]<br>Font utilizzati: Sora, Open Sans.</p>
+                        </div>
+                        <div class="spacer"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -500,9 +492,13 @@
             overflow-y: auto !important;
             height: auto !important;
         }
+
+        html, body, #container-main {
+            height: 100%;
+            overflow: hidden; /* Impedisce lo scroll di tutta la pagina */
+        }
         
         body{
-            overflow-x: hidden;
             position: fixed;
         }
 
@@ -519,6 +515,13 @@
 
         #main-navbar{
             height: 8vh;
+        }
+
+        .nav-content {
+            flex-shrink: 0; /* Impedisce alla barra di sparire o rimpicciolirsi */
+            background-color: white; /* Fondamentale perché il testo non si legga in trasparenza sotto */
+            z-index: 10;
+            padding: 10px 0;
         }
 
         .nav-content a{
@@ -668,25 +671,27 @@
         #mobile-content{
             display: flex;
             flex-direction: column;
-            height: auto !important; 
-            overflow: visible !important;
             margin-top: 2vh;
 
             font-family: 'Sora', sans-serif;
             font-weight: 400;
             font-size: 4.2vw;
             line-height: 1.4;
-            padding-bottom: 10vh; 
+            padding-bottom: 10vh;
+
+            display: block; /* Da flex a block per far fluire gli elementi uno sotto l'altro */
+            overflow: hidden;
+        }
+
+        #mobile-content {
+            display: flex !important;
+            flex-direction: column; /* Dispone nav e testo in verticale */
+            height: calc(100vh - 70px); /* Sostituisci 70px con l'altezza della tua main-navbar */
+            overflow: hidden; /* Impedisce a tutto il blocco di uscire dallo schermo */
         }
 
         #mobile-content p{
             margin: 0;
-        }
-
-        #mobile-content {
-            display: block; /* Da flex a block per far fluire gli elementi uno sotto l'altro */
-            height: auto !important; 
-            overflow: visible !important;
         }
 
         #text-info, #text-class, #text-credits {
@@ -713,6 +718,20 @@
             margin-bottom: 20px;
         }
 
+        .scrollable-text-content {
+            flex-grow: 1;
+            overflow-y: auto !important; /* Abilita lo scroll interno */
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            /* Nasconde la barra per Internet Explorer e Edge */
+            -ms-overflow-style: none;
+            padding-bottom: 10vh;
+        }
+
+        .scrollable-text-content::-webkit-scrollbar {
+            display: none;
+        }
+
         .scrollable-text-content .single-p-mix{
             padding-top: 2vh;
         }
@@ -737,11 +756,8 @@
             justify-content: flex-start; /* Forza l'inizio dall'alto */
             align-items: stretch; /* Assicura che la nav occupi tutta la larghezza */
             min-height: 100vh; /* Occupa tutta l'altezza dello schermo */
-        }
-
-        #main-navbar {
-            flex-shrink: 0; /* Impedisce alla navbar di deformarsi */
-            height: 60px;   /* Opzionale: fissa un'altezza precisa se vuoi che sia costante */
+            padding-left: 3vh;
+            padding-right: 3vh;
         }
 
         #hero-stats p{
