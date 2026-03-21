@@ -124,7 +124,6 @@
                         <div id="text-credits-mobile" class="tab-content" style="display:none;">
                             <p>Progetto di Tesi di: [Tuo Nome]<br>Relatore: [Nome Relatore]<br>Font utilizzati: Sora, Open Sans.</p>
                         </div>
-                        <div class="spacer"></div>
                     </div>
                 </div>
             </div>
@@ -981,10 +980,10 @@
     }
 
     document.querySelectorAll(".icon").forEach(image => {
-    image.addEventListener("click", () => {
-        const link = image.getAttribute("data-link"); // Leggi il link dal data-link
-        window.open(link, "_blank"); // Apri il link in una nuova scheda
+        image.addEventListener("click", () => {
+            const link = image.getAttribute("data-link"); // Leggi il link dal data-link
+            window.open(link, "_blank"); // Apri il link in una nuova scheda
+        });
     });
-});
 </script>
 </html>
