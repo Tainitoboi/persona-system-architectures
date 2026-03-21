@@ -101,6 +101,11 @@
                     <div class="scrollable-text-content">
                         <div class="single-p-mix">
                             <div id="text-info-mobile" class="tab-content" style="display:block;">
+                                <div id="img-info" class="img-tab-content">
+                                    <img src="./images/about/mockup_1.png">
+                                    <img src="./images/about/mockup_2.png">
+                                </div>
+                                <div class="spacer"></div>
                                 <p>Persona System Architectures is a digital archive designed to map and analyze identity structures through the methodological lens of the Persona System Design framework.
                                 The platform operates as both a research device and an exploratory interface, aimed at making visible the systemic and modular nature of personal identity configurations.</p>
                                 <p>The archive gathers case studies drawn from heterogeneous contexts, including public figures, fictional characters, artistic personas and mediated identities selected for their 
@@ -166,7 +171,6 @@
         box-sizing: border-box;
         flex-shrink: 0;
         flex-direction: row;
-        flex-grow: 1; /* Occupa tutto lo spazio verticale rimanente */
         column-gap: 2vh;
     }
 
@@ -228,10 +232,10 @@
     #container {
         display: flex;
         flex-direction: row;
-        flex-grow: 1; /* Occupa tutto lo spazio verticale rimanente */
+        flex-grow: 1;
         width: 100%;
         column-gap: 2vh;
-        overflow: hidden; /* Il contenitore delle colonne non deve scorrere... */
+        overflow: hidden;
     }
 
     .nav-content {
@@ -723,9 +727,21 @@
             text-indent: 10vw;
         }
 
-        #container-main{
-            padding-left: 3vh;
-            padding-right: 3vh;
+        .img-tab-content{
+            padding-top: 0;
+        }
+
+        #container-main {
+            display: flex;
+            flex-direction: column; /* Gli elementi vanno uno sotto l'altro */
+            justify-content: flex-start; /* Forza l'inizio dall'alto */
+            align-items: stretch; /* Assicura che la nav occupi tutta la larghezza */
+            min-height: 100vh; /* Occupa tutta l'altezza dello schermo */
+        }
+
+        #main-navbar {
+            flex-shrink: 0; /* Impedisce alla navbar di deformarsi */
+            height: 60px;   /* Opzionale: fissa un'altezza precisa se vuoi che sia costante */
         }
 
         #hero-stats p{
