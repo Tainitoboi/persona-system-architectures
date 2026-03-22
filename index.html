@@ -1229,6 +1229,31 @@
             background-color: transparent !important;
         }
 
+        #table-body:hover .table-row {
+            opacity: 1;
+        }
+
+        #table-body .table-row:hover {
+            opacity: 1;
+        }
+
+        #table-body:hover .table-row:not(:hover) {
+            opacity: 1;
+        }
+
+        #table-body .table-row:hover + .table-row {
+            opacity: 1 !important;
+        }
+
+        #table-body .table-row:first-child {
+            border-top: none;
+            /* oppure margin-top: 0; se avevi usato margini */
+        }
+
+        #table-body .table-row:hover + .table-row > div {
+            opacity: 1; /* Spegne il testo e gli elementi interni della riga sotto */
+        }
+
         .color-group{
             display: none;
         }
@@ -1459,5 +1484,23 @@
         rows.forEach(row => body.appendChild(row));
         body.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    window.addEventListener('scroll', function() {
+        // Toglie il focus da qualsiasi elemento attivo (come la riga appena toccata)
+        if (document.activeElement) {
+            document.activeElement.blur();
+        }
+    }, true);
+
+    // Opzionale: previene il "tap highlight" persistente
+    document.querySelectorAll('.table-row').forEach(row => {
+        row.addEventListener('touchend', function() {
+            // Un piccolo ritardo per permettere al click legittimo di passare, 
+            // ma pulire lo stato visivo subito dopo
+            setTimeout(() => {
+                this.blur();
+            }, 100);
+        });
+    });
 </script>
 </html>
