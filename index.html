@@ -1218,6 +1218,17 @@
             width: 100%;
         }
 
+        .table-row:hover {
+            background-color: transparent !important;
+            /* Se hai altri effetti come ombre o bordi, resetta anche quelli */
+            box-shadow: none !important;
+        }
+        
+        /* Assicurati che le celle interne non mantengano stili di hover */
+        .table-row:hover .table-cell {
+            background-color: transparent !important;
+        }
+
         .color-group{
             display: none;
         }
