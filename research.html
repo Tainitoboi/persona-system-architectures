@@ -34,35 +34,38 @@
             </nav>
         </nav>
         <div class="col-12" id="container">
-            <div class="col-3" id="content">
-                <div class="section-scrollable">
+            <div class="col-5" id="content-adv">
+                <div class="col-6" id="content">
+                    <div class="section-scrollable">
+                        <div class="column-navbar">
+                            <div class="nav-content">
+                                <a class="active" style="cursor: default;">Research</a>
+                            </div>
+                        </div>
+                        <div class="scrollable-text-content">
+                            <div class="single-p-mix">
+                                <p class="description-p">Persona System Architectures is a project developed by Marco Taino as the outcome of his Master’s Degree thesis in Communication Design at Politecnico di Milano. The research investigates the conceptual, relational, and strategic dimensions of personal identity in contemporary mediated culture.</p>
+                                <p class="description-p">The thesis explores identity not as a fixed or essential attribute, but as a dynamic and structured system emerging at the intersection of philosophy, sociology, and branding theory. Starting from classical and modern philosophical reflections on the principle of identity, the research traces its evolution toward relational and process-oriented interpretations of the self. Particular attention is given to the ways in which identity is shaped through social interaction, recognition and representation, especially within contemporary digital environments.</p>
+                                <p class="description-p">Building on this theoretical foundation, the study examines the rise of personal branding as a cultural and professional practice that translates corporate branding logics into the individual sphere. While personal branding provides tools for coherence, visibility, and strategic positioning, it also introduces tensions between authenticity and performance, human complexity and strategic control. The research addresses this tension by proposing an alternative interpretative framework capable of integrating design methodology with the lived, relational nature of identity.</p>
+                                <p class="description-p">The core outcome of the thesis is the development of the Persona System Design, a conceptual and analytical model that understands the personal brand as a modular ecosystem composed of three primary identity projections: alias (nominal dimension), avatar (representational and sensory dimension), and alter ego (character and behavioral dimension). These modules interact in multiple configurations, generating structured identity architectures that can be observed, analyzed, and compared across different contexts.</p>
+                                <div class="spacer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4" id="content">
                     <div class="column-navbar">
                         <div class="nav-content">
-                            <a class="active" style="cursor: default;">Research</a>
                         </div>
                     </div>
-                    <div class="scrollable-text-content">
-                        <div class="single-p-mix">
-                            <p class="description-p">Persona System Architectures is a project developed by Marco Taino as the outcome of his Master’s Degree thesis in Communication Design at Politecnico di Milano. The research investigates the conceptual, relational, and strategic dimensions of personal identity in contemporary mediated culture.</p>
-                            <p class="description-p">The thesis explores identity not as a fixed or essential attribute, but as a dynamic and structured system emerging at the intersection of philosophy, sociology, and branding theory. Starting from classical and modern philosophical reflections on the principle of identity, the research traces its evolution toward relational and process-oriented interpretations of the self. Particular attention is given to the ways in which identity is shaped through social interaction, recognition and representation, especially within contemporary digital environments.</p>
-                            <p class="description-p">Building on this theoretical foundation, the study examines the rise of personal branding as a cultural and professional practice that translates corporate branding logics into the individual sphere. While personal branding provides tools for coherence, visibility, and strategic positioning, it also introduces tensions between authenticity and performance, human complexity and strategic control. The research addresses this tension by proposing an alternative interpretative framework capable of integrating design methodology with the lived, relational nature of identity.</p>
-                            <p class="description-p">The core outcome of the thesis is the development of the Persona System Design, a conceptual and analytical model that understands the personal brand as a modular ecosystem composed of three primary identity projections: alias (nominal dimension), avatar (representational and sensory dimension), and alter ego (character and behavioral dimension). These modules interact in multiple configurations, generating structured identity architectures that can be observed, analyzed, and compared across different contexts.</p>
-                            <div class="spacer"></div>
+                    <div class="column-scroll-content">
+                        <div id="img-info" class="img-tab-content">
+                            <img src="./images/research/research_1.png">
+                            <img src="./images/research/research_2.png">
+                            <img src="./images/research/research_2.png">
                         </div>
+                        <div class="spacer"></div>
                     </div>
-                </div>
-            </div>
-            <div class="col-2" id="content">
-                <div class="column-navbar">
-                    <div class="nav-content">
-                    </div>
-                </div>
-                <div class="column-scroll-content">
-                    <div id="img-info" class="img-tab-content">
-                        <img src="./images/research/research_1.png">
-                        <img src="./images/research/research_2.png">
-                    </div>
-                    <div class="spacer"></div>
                 </div>
             </div>
             <div class="col-3" id="content">
@@ -286,7 +289,31 @@
         display: none;
     }
 
-    .col-5, .col-3 , col-2{
+    .col-4 {
+        width: 40.0%;
+        scrollbar-width: none;
+        /* Nasconde la barra per Internet Explorer e Edge */
+        -ms-overflow-style: none;
+        overflow-y: auto; /* Attiva lo scroll */
+    }
+
+    .col-4::-webkit-scrollbar {
+        display: none;
+    }
+
+    .col-6 {
+        width: 60.0%;
+        scrollbar-width: none;
+        /* Nasconde la barra per Internet Explorer e Edge */
+        -ms-overflow-style: none;
+        overflow-y: auto; /* Attiva lo scroll */
+    }
+
+    .col-6::-webkit-scrollbar {
+        display: none;
+    }
+
+    .col-5, .col-3 , .col-2, .col-4, .col-6{
         padding-top: 0 !important; 
         display: flex;
         flex-direction: column;
@@ -319,6 +346,13 @@
         /* Assicurati che non ci siano overflow-y in conflitto qui */
         display: flex;
         flex-direction: column;
+    }
+
+    #content-adv {
+        /* Assicurati che non ci siano overflow-y in conflitto qui */
+        display: flex;
+        flex-direction: row;
+        column-gap: 2vh;
     }
 
     #content p{
